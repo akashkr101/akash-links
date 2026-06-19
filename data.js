@@ -3,38 +3,39 @@ const destinations = [
 {
     name: "Kashmir",
     description: "Snow-covered mountains, frozen rivers and unforgettable adventures.",
-    hero: "images/Kashmir/hero.jpg",
+    hero: "images/kashmir/hero.jpg",
 
     images: [
-        "images/Kashmir/gallery1.jpg",
-        "images/Kashmir/gallery2.jpg",
-        "images/Kashmir/gallery3.jpg",
-        "images/Kashmir/gallery4.jpg",
-        "images/Kashmir/gallery5.jpg",
-        "images/Kashmir/gallery6.jpg",
-        "images/Kashmir/gallery7.jpg"
+        "images/kashmir/gallery1.jpg",
+        "images/kashmir/gallery2.jpg",
+        "images/kashmir/gallery3.jpg",
+        "images/kashmir/gallery4.jpg",
+        "images/kashmir/gallery5.jpg",
+        "images/kashmir/gallery6.jpg",
+        "images/kashmir/gallery7.jpg"
     ],
 
     videos: [
-        "videos/Kashmir/reel1.mp4"
+        "videos/kashmir/reel1.mp4"
     ]
 },
 
 {
-    name: "nainital",
+    name: "Nainital",
     description: "Beautiful lakes and peaceful mountain views.",
     hero: "images/nainital/hero.jpg",
 
     images: [
         "images/nainital/gallery1.jpg",
-        "images/nainital/gallery2.jpg"
+        "images/nainital/gallery2.jpg",
+        "images/nainital/gallery3.jpg"
     ],
 
     videos: []
 },
 
 {
-    name: "noida",
+    name: "Noida",
     description: "Urban life and city exploration.",
     hero: "images/noida/hero.jpg",
 
