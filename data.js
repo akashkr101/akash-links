@@ -21,25 +21,25 @@ const destinations = [
 },
 
 {
-    name: "Nainital",
+    name: "nainital",
     description: "Beautiful lakes and peaceful mountain views.",
-    hero: "images/Nainital/hero.jpg",
+    hero: "images/nainital/hero.jpg",
 
     images: [
-        "images/Nainital/gallery1.jpg",
-        "images/Nainital/gallery2.jpg"
+        "images/nainital/gallery1.jpg",
+        "images/nainital/gallery2.jpg"
     ],
 
     videos: []
 },
 
 {
-    name: "Noida",
+    name: "noida",
     description: "Urban life and city exploration.",
-    hero: "images/Noida/hero.jpg",
+    hero: "images/noida/hero.jpg",
 
     images: [
-        "images/Noida/gallery1.jpg"
+        "images/noida/gallery1.jpg"
     ],
 
     videos: []

@@ -4,195 +4,259 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Accelerate Clicks</title>
+<title>Accelerate Clicks | Travel & Photography</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#0b0b0b;
-    color:white;
-    overflow-x:hidden;
+background:#080808;
+color:white;
+overflow-x:hidden;
 }
 
-html{
-    scroll-behavior:smooth;
+a{
+text-decoration:none;
 }
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:40px;
-    background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-    url('images/Kashmir/hero.jpg');
-    background-size:cover;
-    background-position:center;
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+url("images/Kashmir/hero.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
 }
 
 .hero-content{
-    max-width:900px;
+max-width:900px;
 }
 
 .hero h1{
-    font-size:4rem;
-    margin-bottom:10px;
+font-size:4rem;
+margin-bottom:15px;
 }
 
 .hero p{
-    color:#d4d4d4;
-    margin-bottom:20px;
+font-size:1.2rem;
+color:#ddd;
 }
 
 .socials{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
+margin-top:30px;
+display:flex;
+gap:15px;
+justify-content:center;
+flex-wrap:wrap;
 }
 
 .socials a{
-    text-decoration:none;
-    color:white;
-    padding:12px 22px;
-    border-radius:50px;
-    background:rgba(255,255,255,.1);
-    transition:.3s;
+padding:12px 24px;
+border-radius:50px;
+background:#ffffff10;
+backdrop-filter:blur(10px);
+color:white;
+transition:.3s;
+border:1px solid #ffffff20;
 }
 
 .socials a:hover{
-    background:white;
-    color:black;
+transform:translateY(-3px);
+background:#ffffff20;
 }
 
 .section{
-    padding:80px 20px;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
+padding:80px 8%;
 }
 
 .section-title{
-    text-align:center;
-    font-size:2.2rem;
-    margin-bottom:40px;
+font-size:2.5rem;
+margin-bottom:40px;
+text-align:center;
 }
 
-.destination-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
+.destinations{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
 }
 
 .card{
-    background:#141414;
-    border-radius:20px;
-    overflow:hidden;
-    cursor:pointer;
-    transition:.3s;
-    border:1px solid #222;
+position:relative;
+height:400px;
+border-radius:25px;
+overflow:hidden;
+cursor:pointer;
+transition:.4s;
 }
 
 .card:hover{
-    transform:translateY(-8px);
+transform:translateY(-10px);
 }
 
 .card img{
-    width:100%;
-    height:250px;
-    object-fit:cover;
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.card-content{
-    padding:20px;
+.card-overlay{
+position:absolute;
+inset:0;
+background:linear-gradient(to top,
+rgba(0,0,0,.9),
+rgba(0,0,0,.1));
+display:flex;
+align-items:flex-end;
+padding:30px;
 }
 
-.card-content h3{
-    margin-bottom:10px;
+.card-overlay h3{
+font-size:2rem;
 }
 
-.card-content p{
-    color:#bdbdbd;
+.stats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
-.viewer{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:#000;
-    overflow-y:auto;
-    z-index:9999;
-    padding:30px;
+.stat-box{
+background:#111;
+padding:30px;
+border-radius:20px;
+text-align:center;
 }
 
-.viewer-header{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:30px;
+.stat-box h2{
+font-size:2.5rem;
 }
 
-.close-btn{
-    background:#fff;
-    color:#000;
-    border:none;
-    padding:10px 20px;
-    border-radius:30px;
-    cursor:pointer;
-}
-
-.viewer-gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
-}
-
-.viewer-gallery img{
-    width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:15px;
-}
-
-.video-section{
-    margin-top:40px;
-}
-
-.video-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:20px;
-}
-
-.video-grid video{
-    width:100%;
-    border-radius:15px;
+.stat-box p{
+color:#aaa;
 }
 
 footer{
-    text-align:center;
-    padding:40px;
-    border-top:1px solid #222;
-    color:#999;
+padding:40px;
+text-align:center;
+color:#888;
+}
+
+.modal{
+position:fixed;
+inset:0;
+background:#000;
+display:none;
+z-index:999;
+overflow-y:auto;
+}
+
+.modal-content{
+padding:40px;
+max-width:1400px;
+margin:auto;
+}
+
+.close-btn{
+position:fixed;
+top:20px;
+right:30px;
+font-size:40px;
+cursor:pointer;
+z-index:1000;
+}
+
+.destination-hero{
+height:70vh;
+border-radius:25px;
+overflow:hidden;
+position:relative;
+margin-bottom:40px;
+}
+
+.destination-hero img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.destination-title{
+position:absolute;
+bottom:40px;
+left:40px;
+}
+
+.destination-title h1{
+font-size:4rem;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:300px;
+object-fit:cover;
+border-radius:20px;
+cursor:pointer;
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.video-grid{
+margin-top:40px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:20px;
+}
+
+video{
+width:100%;
+border-radius:20px;
+}
+
+.lightbox{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.95);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:2000;
+}
+
+.lightbox img{
+max-width:95%;
+max-height:95%;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.6rem;
+font-size:2.7rem;
+}
+
+.destination-title h1{
+font-size:2rem;
 }
 
 }
@@ -203,13 +267,14 @@ footer{
 <body>
 
 <section class="hero">
-
 <div class="hero-content">
 
 <h1>Accelerate Clicks</h1>
 
 <p>
-Travel • Photography • Adventure
+Travel • Photography • Stories
+<br><br>
+Collecting moments, not things.
 </p>
 
 <div class="socials">
@@ -226,150 +291,184 @@ YouTube
 Facebook
 </a>
 
-<a href="https://snapchat.com/add/akashkr_xda" target="_blank">
+<a href="https://snapchat.com/akashkr_xda" target="_blank">
 Snapchat
 </a>
 
 </div>
 
 </div>
+</section>
+
+<section class="section">
+
+<h2 class="section-title">Explore My Journey</h2>
+
+<div id="destinationGrid" class="destinations"></div>
 
 </section>
 
 <section class="section">
 
-<div class="container">
+<h2 class="section-title">Travel Stats</h2>
 
-<h2 class="section-title">
-Destinations
-</h2>
+<div class="stats">
 
-<div id="destinationGrid" class="destination-grid">
+<div class="stat-box">
+<h2>3+</h2>
+<p>Destinations</p>
+</div>
+
+<div class="stat-box">
+<h2>100+</h2>
+<p>Photos Captured</p>
+</div>
+
+<div class="stat-box">
+<h2>50+</h2>
+<p>Videos Created</p>
+</div>
+
+<div class="stat-box">
+<h2>∞</h2>
+<p>Memories</p>
 </div>
 
 </div>
 
 </section>
 
-<div class="viewer" id="viewer">
-
-<div class="viewer-header">
-
-<h2 id="viewerTitle"></h2>
-
-<button class="close-btn" onclick="closeViewer()">
-Close
-</button>
-
-</div>
-
-<p id="viewerDescription"></p>
-
-<br><br>
-
-<div class="viewer-gallery" id="viewerGallery"></div>
-
-<div class="video-section">
-
-<h2 style="margin-top:40px;">
-Videos
-</h2>
-
-<br>
-
-<div class="video-grid" id="videoGrid"></div>
-
-</div>
-
-</div>
-
 <footer>
 
-© Accelerate Clicks
+© 2026 Accelerate Clicks
 
 </footer>
+
+<div class="modal" id="destinationModal">
+
+<div class="close-btn" onclick="closeDestination()">
+✕
+</div>
+
+<div id="modalContent" class="modal-content">
+</div>
+
+</div>
+
+<div class="lightbox" id="lightbox">
+<img id="lightboxImg">
+</div>
 
 <script src="data.js"></script>
 
 <script>
 
-const grid = document.getElementById("destinationGrid");
+const grid=document.getElementById('destinationGrid');
 
-destinations.forEach((destination,index)=>{
+destinations.forEach((place,index)=>{
 
-const card = document.createElement("div");
+grid.innerHTML+=`
+<div class="card" onclick="openDestination(${index})">
 
-card.className="card";
+<img src="${place.hero}">
 
-card.innerHTML=`
-
-<img src="${destination.hero}" alt="${destination.name}">
-
-<div class="card-content">
-
-<h3>${destination.name}</h3>
-
-<p>${destination.description}</p>
-
+<div class="card-overlay">
+<h3>${place.name}</h3>
 </div>
 
+</div>
 `;
-
-card.onclick=()=>openDestination(index);
-
-grid.appendChild(card);
 
 });
 
 function openDestination(index){
 
-const destination = destinations[index];
+const place=destinations[index];
 
-document.getElementById("viewer").style.display="block";
+let images='';
 
-document.getElementById("viewerTitle").innerText=
-destination.name;
+place.images.forEach(img=>{
 
-document.getElementById("viewerDescription").innerText=
-destination.description;
-
-const gallery =
-document.getElementById("viewerGallery");
-
-gallery.innerHTML="";
-
-destination.images.forEach(img=>{
-
-gallery.innerHTML +=
-`<img src="${img}">`;
+images+=`
+<img src="${img}" onclick="openImage('${img}')">
+`;
 
 });
 
-const videoGrid =
-document.getElementById("videoGrid");
+let videos='';
 
-videoGrid.innerHTML="";
+place.videos.forEach(video=>{
 
-destination.videos.forEach(video=>{
-
-videoGrid.innerHTML +=
-`
+videos+=`
 <video controls>
-<source src="${video}" type="video/mp4">
+<source src="${video}">
 </video>
 `;
 
 });
 
+document.getElementById('modalContent').innerHTML=`
+
+<div class="destination-hero">
+
+<img src="${place.hero}">
+
+<div class="destination-title">
+<h1>${place.name}</h1>
+<p>${place.description}</p>
+</div>
+
+</div>
+
+<h2 style="margin-bottom:20px">Gallery</h2>
+
+<div class="gallery">
+${images}
+</div>
+
+${
+place.videos.length
+?
+`
+<h2 style="margin-top:50px;margin-bottom:20px">
+Travel Reels
+</h2>
+
+<div class="video-grid">
+${videos}
+</div>
+`
+:
+''
+}
+
+`;
+
+document.getElementById('destinationModal').style.display='block';
+
 window.scrollTo(0,0);
 
 }
 
-function closeViewer(){
+function closeDestination(){
 
-document.getElementById("viewer").style.display="none";
+document.getElementById('destinationModal').style.display='none';
 
 }
+
+function openImage(src){
+
+document.getElementById('lightbox').style.display='flex';
+
+document.getElementById('lightboxImg').src=src;
+
+}
+
+document.getElementById('lightbox').onclick=()=>{
+
+document.getElementById('lightbox').style.display='none';
+
+};
 
 </script>
 
