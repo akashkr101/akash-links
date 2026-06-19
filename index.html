@@ -1,209 +1,108 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Accelerate Clicks</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+</head>
 <body>
 
-<section class="hero">
+<header class="hero">
 
-<div class="hero-content">
+<div class="hero-overlay">
 
-<h1>Accelerate Clicks</h1>
+<img id="profileImage" class="profile-image">
 
-<p>
-Travel • Photography • Stories
-<br><br>
-Collecting moments, not things.
-</p>
+<h1 id="brand"></h1>
 
-<div class="socials">
+<h2 id="name"></h2>
 
-<a href="https://www.instagram.com/accelerate.clicks" target="_blank">Instagram</a>
+<p id="tagline"></p>
 
-<a href="https://www.youtube.com/@accelerate.clicks" target="_blank">YouTube</a>
+<div class="socials" id="socials"></div>
 
-<a href="https://www.facebook.com/accelerate.clicks" target="_blank">Facebook</a>
-
-<a href="https://snapchat.com/akashkr_xda" target="_blank">Snapchat</a>
+<a href="#destinations" class="explore-btn">
+Explore My Journey
+</a>
 
 </div>
 
+</header>
+
+<section class="stats">
+
+<div class="stat-card">
+<h2 id="destinationCount">0</h2>
+<p>Destinations</p>
+</div>
+
+<div class="stat-card">
+<h2 id="photoCount">0</h2>
+<p>Photos</p>
+</div>
+
+<div class="stat-card">
+<h2 id="videoCount">0</h2>
+<p>Videos</p>
+</div>
+
+<div class="stat-card">
+<h2>∞</h2>
+<p>Memories</p>
 </div>
 
 </section>
 
-<section class="section">
+<section id="destinations">
 
-<h2 class="section-title">Explore My Journey</h2>
+<h2 class="section-title">
+Explore Destinations
+</h2>
 
-<div id="destinationGrid" class="destinations"></div>
+<div id="destinationGrid" class="destination-grid"></div>
+
+</section>
+
+<section class="bucket">
+
+<h2 class="section-title">
+Upcoming Adventures
+</h2>
+
+<ul id="bucketList"></ul>
 
 </section>
 
 <footer>
 
-© Accelerate Clicks
+<p>© Accelerate Clicks</p>
 
 </footer>
 
-<div class="modal" id="modal">
+<div id="destinationModal" class="modal">
 
-<div class="close" onclick="closeDestination()">
-✕
+<span class="close" onclick="closeModal()">
+&times;
+</span>
+
+<div id="modalContent"></div>
+
 </div>
 
-<div id="modalContent" class="modal-content"></div>
-
-</div>
-
-<div class="lightbox" id="lightbox">
+<div id="lightbox" class="lightbox">
 
 <img id="lightboxImg">
 
 </div>
 
 <script src="data.js"></script>
-
-<script>
-
-const grid=document.getElementById('destinationGrid');
-
-destinations.forEach((place,index)=>{
-
-grid.innerHTML+=`
-
-<div class="card" onclick="openDestination(${index})">
-
-<img src="${place.hero}">
-
-<div class="overlay">
-
-<h3>${place.name}</h3>
-
-</div>
-
-</div>
-
-`;
-
-});
-
-function openDestination(index){
-
-const place=destinations[index];
-
-let images='';
-
-place.images.forEach(img=>{
-
-images+=`
-<img src="${img}" onclick="openImage('${img}')">
-`;
-
-});
-
-let videos='';
-
-place.videos.forEach(video=>{
-
-videos+=`
-
-<video controls>
-
-<source src="${video}">
-
-</video>
-
-`;
-
-});
-
-document.getElementById('modalContent').innerHTML=`
-
-<div class="destination-hero">
-
-<img src="${place.hero}">
-
-<div class="destination-info">
-
-<h1>${place.name}</h1>
-
-<p>${place.description}</p>
-
-</div>
-
-</div>
-
-<h2>Gallery</h2>
-
-<br>
-
-<div class="gallery">
-
-${images}
-
-</div>
-
-${
-place.videos.length
-?
-`
-
-<h2 style="margin-top:50px;">
-Travel Reels
-</h2>
-
-<br>
-
-<div class="video-grid">
-
-${videos}
-
-</div>
-
-`
-:
-''
-}
-
-`;
-
-document.getElementById('modal').style.display='block';
-
-}
-
-function closeDestination(){
-
-document.getElementById('modal').style.display='none';
-
-}
-
-function openImage(src){
-
-document.getElementById('lightbox').style.display='flex';
-
-document.getElementById('lightboxImg').src=src;
-
-}
-
-document.getElementById('lightbox').onclick=()=>{
-
-document.getElementById('lightbox').style.display='none';
-
-};
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
