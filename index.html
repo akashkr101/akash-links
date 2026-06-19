@@ -1,11 +1,10 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Accelerate Clicks | Travel & Adventure</title>
+<title>Accelerate Clicks</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -18,104 +17,67 @@
     font-family:'Poppins',sans-serif;
 }
 
-html{
-    scroll-behavior:smooth;
-}
-
 body{
-    background:#050505;
+    background:#0b0b0b;
     color:white;
     overflow-x:hidden;
 }
 
-/* HERO */
+html{
+    scroll-behavior:smooth;
+}
 
 .hero{
-    height:100vh;
-    background:
-    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.80)),
-    url('images/Kashmir/hero.jpg');
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:20px;
+    padding:40px;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+    url('images/Kashmir/hero.jpg');
+    background-size:cover;
+    background-position:center;
 }
 
 .hero-content{
     max-width:900px;
 }
 
-.profile{
-    width:150px;
-    height:150px;
-    border-radius:50%;
-    object-fit:cover;
-    border:4px solid rgba(255,255,255,.2);
-    box-shadow:0 0 30px rgba(255,255,255,.2);
-    margin-bottom:20px;
-}
-
 .hero h1{
     font-size:4rem;
-    font-weight:800;
+    margin-bottom:10px;
 }
 
 .hero p{
-    font-size:1.2rem;
-    color:#d1d1d1;
-    margin-top:10px;
+    color:#d4d4d4;
+    margin-bottom:20px;
 }
 
-.tagline{
-    margin-top:15px;
-    color:#aaaaaa;
-}
-
-.social-buttons{
-    margin-top:35px;
+.socials{
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     gap:15px;
 }
 
-.social-buttons a{
+.socials a{
     text-decoration:none;
     color:white;
-    background:rgba(255,255,255,.1);
     padding:12px 22px;
     border-radius:50px;
+    background:rgba(255,255,255,.1);
     transition:.3s;
-    backdrop-filter:blur(10px);
 }
 
-.social-buttons a:hover{
+.socials a:hover{
     background:white;
     color:black;
-    transform:translateY(-3px);
 }
 
-.scroll{
-    margin-top:40px;
-    animation:bounce 2s infinite;
-    color:#ddd;
-}
-
-@keyframes bounce{
-    50%{
-        transform:translateY(10px);
-    }
-}
-
-/* SECTION */
-
-section{
-    padding:90px 20px;
+.section{
+    padding:80px 20px;
 }
 
 .container{
@@ -125,266 +87,291 @@ section{
 
 .section-title{
     text-align:center;
-    font-size:2.3rem;
-    margin-bottom:50px;
+    font-size:2.2rem;
+    margin-bottom:40px;
 }
 
-/* ABOUT */
-
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    color:#d0d0d0;
-    line-height:2;
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
 }
 
-/* DESTINATION */
-
-.destination{
-    background:#111;
-    border-radius:25px;
+.card{
+    background:#141414;
+    border-radius:20px;
     overflow:hidden;
+    cursor:pointer;
+    transition:.3s;
     border:1px solid #222;
 }
 
-.destination img{
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
     width:100%;
-    height:500px;
+    height:250px;
     object-fit:cover;
 }
 
-.destination-content{
-    padding:35px;
+.card-content{
+    padding:20px;
 }
 
-.destination-content h3{
-    font-size:2rem;
+.card-content h3{
+    margin-bottom:10px;
 }
 
-.destination-content p{
-    margin-top:15px;
-    color:#ccc;
-    line-height:1.8;
+.card-content p{
+    color:#bdbdbd;
 }
 
-/* GALLERY */
+.viewer{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:#000;
+    overflow-y:auto;
+    z-index:9999;
+    padding:30px;
+}
 
-.gallery{
+.viewer-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.close-btn{
+    background:#fff;
+    color:#000;
+    border:none;
+    padding:10px 20px;
+    border-radius:30px;
+    cursor:pointer;
+}
+
+.viewer-gallery{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
     gap:20px;
 }
 
-.gallery img{
+.viewer-gallery img{
     width:100%;
-    height:320px;
+    height:300px;
     object-fit:cover;
-    border-radius:20px;
-    transition:.4s;
-    cursor:pointer;
+    border-radius:15px;
 }
 
-.gallery img:hover{
-    transform:scale(1.04);
+.video-section{
+    margin-top:40px;
 }
 
-/* QUOTE */
-
-.quote{
-    text-align:center;
-    font-size:1.5rem;
-    color:#ddd;
-    font-style:italic;
-    max-width:800px;
-    margin:auto;
+.video-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:20px;
 }
 
-/* FOOTER */
+.video-grid video{
+    width:100%;
+    border-radius:15px;
+}
 
 footer{
     text-align:center;
     padding:40px;
     border-top:1px solid #222;
-    color:#888;
+    color:#999;
 }
 
 @media(max-width:768px){
 
 .hero h1{
-    font-size:2.5rem;
-}
-
-.profile{
-    width:120px;
-    height:120px;
-}
-
-.destination img{
-    height:280px;
-}
-
-.section-title{
-    font-size:1.8rem;
+    font-size:2.6rem;
 }
 
 }
 
 </style>
 </head>
+
 <body>
 
-<!-- HERO -->
-
-<div class="hero">
+<section class="hero">
 
 <div class="hero-content">
 
-<img src="images/Kashmir/profile.jpg" class="profile" alt="Profile">
-
 <h1>Accelerate Clicks</h1>
 
-<p>Exploring India One Journey at a Time</p>
+<p>
+Travel • Photography • Adventure
+</p>
 
-<div class="tagline">
-📸 Travel • Photography • Mountains • Adventure
-</div>
-
-<div class="social-buttons">
+<div class="socials">
 
 <a href="https://www.instagram.com/accelerate.clicks" target="_blank">
-📷 Instagram
+Instagram
 </a>
 
 <a href="https://www.youtube.com/@accelerate.clicks" target="_blank">
-🎥 YouTube
+YouTube
 </a>
 
 <a href="https://www.facebook.com/accelerate.clicks" target="_blank">
-👍 Facebook
+Facebook
 </a>
 
 <a href="https://snapchat.com/add/akashkr_xda" target="_blank">
-👻 Snapchat
+Snapchat
 </a>
 
 </div>
 
-<div class="scroll">
-⬇ Scroll To Explore
 </div>
 
-</div>
+</section>
 
-</div>
-
-<!-- ABOUT -->
-
-<section>
+<section class="section">
 
 <div class="container">
 
-<h2 class="section-title">About Accelerate Clicks</h2>
+<h2 class="section-title">
+Destinations
+</h2>
 
-<div class="about">
-
-Hi, I'm Akash Kumar.
-
-Accelerate Clicks is my travel journey through mountains,
-snow-covered valleys, lakes, forests and hidden destinations.
-
-Every photo and video on this page represents a memory,
-an adventure and a story worth sharing.
-
-From the magical snowfall of Kashmir to breathtaking Himalayan landscapes,
-I aim to inspire people to explore more and experience nature beyond screens.
-
+<div id="destinationGrid" class="destination-grid">
 </div>
 
 </div>
 
 </section>
 
-<!-- DESTINATION -->
+<div class="viewer" id="viewer">
 
-<section>
+<div class="viewer-header">
 
-<div class="container">
+<h2 id="viewerTitle"></h2>
 
-<h2 class="section-title">Featured Destination</h2>
+<button class="close-btn" onclick="closeViewer()">
+Close
+</button>
 
-<div class="destination">
+</div>
 
-<img src="images/Kashmir/hero.jpg" alt="Kashmir">
+<p id="viewerDescription"></p>
 
-<div class="destination-content">
+<br><br>
 
-<h3>🏔 Kashmir</h3>
+<div class="viewer-gallery" id="viewerGallery"></div>
 
-<p>
+<div class="video-section">
 
-A land of snow-covered mountains, peaceful lakes,
-beautiful valleys and unforgettable adventures.
+<h2 style="margin-top:40px;">
+Videos
+</h2>
 
-From Sonamarg to Dal Lake,
-every corner of Kashmir feels like a postcard brought to life.
+<br>
 
-</p>
+<div class="video-grid" id="videoGrid"></div>
 
 </div>
 
 </div>
-
-</div>
-
-</section>
-
-<!-- GALLERY -->
-
-<section>
-
-<div class="container">
-
-<h2 class="section-title">Kashmir Gallery</h2>
-
-<div class="gallery">
-
-<img src="images/Kashmir/gallery1.jpg" alt="">
-<img src="images/Kashmir/gallery2.jpg" alt="">
-<img src="images/Kashmir/gallery3.jpg" alt="">
-<img src="images/Kashmir/gallery4.jpg" alt="">
-<img src="images/Kashmir/gallery5.jpg" alt="">
-<img src="images/Kashmir/gallery6.jpg" alt="">
-<img src="images/Kashmir/gallery7.jpg" alt="">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- QUOTE -->
-
-<section>
-
-<div class="container">
-
-<div class="quote">
-
-"Collecting moments from mountains, lakes and roads less travelled."
-
-</div>
-
-</div>
-
-</section>
 
 <footer>
 
-© 2026 Accelerate Clicks • Travel • Adventure • Photography
+© Accelerate Clicks
 
 </footer>
 
+<script src="data.js"></script>
+
+<script>
+
+const grid = document.getElementById("destinationGrid");
+
+destinations.forEach((destination,index)=>{
+
+const card = document.createElement("div");
+
+card.className="card";
+
+card.innerHTML=`
+
+<img src="${destination.hero}" alt="${destination.name}">
+
+<div class="card-content">
+
+<h3>${destination.name}</h3>
+
+<p>${destination.description}</p>
+
+</div>
+
+`;
+
+card.onclick=()=>openDestination(index);
+
+grid.appendChild(card);
+
+});
+
+function openDestination(index){
+
+const destination = destinations[index];
+
+document.getElementById("viewer").style.display="block";
+
+document.getElementById("viewerTitle").innerText=
+destination.name;
+
+document.getElementById("viewerDescription").innerText=
+destination.description;
+
+const gallery =
+document.getElementById("viewerGallery");
+
+gallery.innerHTML="";
+
+destination.images.forEach(img=>{
+
+gallery.innerHTML +=
+`<img src="${img}">`;
+
+});
+
+const videoGrid =
+document.getElementById("videoGrid");
+
+videoGrid.innerHTML="";
+
+destination.videos.forEach(video=>{
+
+videoGrid.innerHTML +=
+`
+<video controls>
+<source src="${video}" type="video/mp4">
+</video>
+`;
+
+});
+
+window.scrollTo(0,0);
+
+}
+
+function closeViewer(){
+
+document.getElementById("viewer").style.display="none";
+
+}
+
+</script>
+
 </body>
 </html>
-```
