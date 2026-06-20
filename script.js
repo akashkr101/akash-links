@@ -208,20 +208,22 @@ function openDestination(place){
 
     place.videos.forEach(video => {
 
-        videos += `
+    videos += `
 
-        <div class="video-card">
+    <div class="video-card">
 
-            <iframe
+        <iframe
             src="${video}"
             title="Travel Reel"
             loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen>
-            </iframe>
+        </iframe>
 
-        </div>
+    </div>
 
-        `;
+    `;
 
     });
 
