@@ -11,6 +11,29 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
+
+<script>
+window.addEventListener('scroll',()=>{
+
+    const cards =
+    document.querySelectorAll('.card');
+
+    cards.forEach(card=>{
+
+        const rect =
+        card.getBoundingClientRect();
+
+        if(rect.top < window.innerHeight-100){
+
+            card.style.opacity='1';
+            card.style.transform='translateY(0)';
+        }
+
+    });
+
+});
+</script>
+
 <body>
 
 <header class="hero">

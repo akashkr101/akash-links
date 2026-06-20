@@ -85,6 +85,11 @@ videos += `
 
 });
 
+window.scrollTo({
+    top:0,
+    behavior:"smooth"
+});
+
 document.getElementById("modalContent").innerHTML = `
 
 <div class="hero-destination">
