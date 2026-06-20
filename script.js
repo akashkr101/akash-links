@@ -1,11 +1,15 @@
+// =====================
 // PROFILE
+// =====================
 
 document.getElementById("brand").innerText = profile.brand;
 document.getElementById("name").innerText = profile.name;
 document.getElementById("tagline").innerText = profile.tagline;
 document.getElementById("profileImage").src = profile.image;
 
+// =====================
 // SOCIALS
+// =====================
 
 document.getElementById("socials").innerHTML = `
 <a href="${profile.socials.instagram}" target="_blank">Instagram</a>
@@ -14,13 +18,17 @@ document.getElementById("socials").innerHTML = `
 <a href="${profile.socials.snapchat}" target="_blank">Snapchat</a>
 `;
 
-// COUNTERS
+// =====================
+// STATS
+// =====================
 
 let totalDestinations = 0;
 let totalPhotos = 0;
 let totalVideos = 0;
 
+// =====================
 // TIMELINE
+// =====================
 
 const journeyContainer =
 document.getElementById("journeyContainer");
@@ -28,9 +36,11 @@ document.getElementById("journeyContainer");
 journeys.forEach((yearData, yearIndex) => {
 
     let yearSection = document.createElement("div");
+
     yearSection.className = "year-section";
 
     yearSection.innerHTML = `
+
         <h2 class="year-title">
             ${yearData.year} Journey
         </h2>
@@ -55,6 +65,7 @@ journeys.forEach((yearData, yearIndex) => {
             </button>
 
         </div>
+
     `;
 
     journeyContainer.appendChild(yearSection);
@@ -62,7 +73,7 @@ journeys.forEach((yearData, yearIndex) => {
     const slider =
     document.getElementById(`slider-${yearIndex}`);
 
-    yearData.destinations.forEach((place) => {
+    yearData.destinations.forEach(place => {
 
         totalDestinations++;
         totalPhotos += place.images.length;
@@ -104,9 +115,12 @@ journeys.forEach((yearData, yearIndex) => {
 
         `;
     });
+
 });
 
-// STATS
+// =====================
+// COUNTERS
+// =====================
 
 document.getElementById("yearCount").innerText =
 journeys.length;
@@ -120,7 +134,9 @@ totalPhotos;
 document.getElementById("videoCount").innerText =
 totalVideos;
 
+// =====================
 // BUCKET LIST
+// =====================
 
 bucketList.forEach(item => {
 
@@ -129,14 +145,16 @@ bucketList.forEach(item => {
 
 });
 
+// =====================
 // SLIDER BUTTONS
+// =====================
 
 function slideLeft(index){
 
     document
     .getElementById(`slider-${index}`)
     .scrollBy({
-        left:-400,
+        left:-500,
         behavior:"smooth"
     });
 
@@ -147,13 +165,15 @@ function slideRight(index){
     document
     .getElementById(`slider-${index}`)
     .scrollBy({
-        left:400,
+        left:500,
         behavior:"smooth"
     });
 
 }
 
+// =====================
 // OPEN DESTINATION
+// =====================
 
 function openDestination(place){
 
@@ -166,33 +186,48 @@ function openDestination(place){
     url('${place.hero}')
     `;
 
+    // IMAGES
+
     let gallery = "";
 
     place.images.forEach(img => {
 
         gallery += `
+
         <img
         src="${img}"
         onclick="openImage('${img}')">
+
         `;
 
     });
+
+    // YOUTUBE VIDEOS
 
     let videos = "";
 
     place.videos.forEach(video => {
 
         videos += `
-        <video controls>
-            <source
+
+        <div class="video-card">
+
+            <iframe
             src="${video}"
-            type="video/mp4">
-        </video>
+            title="Travel Reel"
+            loading="lazy"
+            allowfullscreen>
+            </iframe>
+
+        </div>
+
         `;
 
     });
 
-    document.getElementById("modalContent").innerHTML = `
+    document.getElementById(
+    "modalContent"
+    ).innerHTML = `
 
         <div style="padding:30px">
 
@@ -206,6 +241,10 @@ function openDestination(place){
 
         </div>
 
+        <h2 style="padding:20px">
+            Photo Gallery
+        </h2>
+
         <div class="gallery">
 
             ${gallery}
@@ -216,15 +255,17 @@ function openDestination(place){
             place.videos.length > 0
             ?
             `
+
             <h2 style="padding:20px">
                 Travel Reels
             </h2>
 
-            <div class="video-grid">
+            <div class="video-slider">
 
                 ${videos}
 
             </div>
+
             `
             :
             ""
@@ -238,7 +279,9 @@ function openDestination(place){
 
 }
 
+// =====================
 // CLOSE MODAL
+// =====================
 
 function closeModal(){
 
@@ -248,7 +291,9 @@ function closeModal(){
 
 }
 
-// LIGHTBOX
+// =====================
+// IMAGE LIGHTBOX
+// =====================
 
 function openImage(src){
 

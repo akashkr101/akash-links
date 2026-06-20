@@ -39,8 +39,11 @@ const journeys = [
 
             videos: [
 
-                "videos/2026-banaras/reel1.mp4",
-                "videos/2026-banaras/reel2.mp4"
+                "https://www.youtube.com/embed/FSviQkRsAuw",
+                "https://www.youtube.com/embed/gjNuiHAkhYU",
+                "https://www.youtube.com/embed/iFEmMyaSw1I",
+                "https://www.youtube.com/embed/3P7OCa45TLo",
+                "https://www.youtube.com/embed/oNZTuyWb88o"
 
             ]
         },

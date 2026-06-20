@@ -406,6 +406,30 @@ body::after{
     border-radius:15px;
 }
 
+.video-slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding:20px 0;
+}
+
+.video-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.video-card{
+    min-width:450px;
+    max-width:450px;
+}
+
+.video-card iframe{
+    width:100%;
+    aspect-ratio:16/9;
+    border:none;
+    border-radius:20px;
+}
+
 /* LIGHTBOX */
 
 .lightbox{
@@ -453,4 +477,28 @@ footer{
         display:none;
     }
 
+}
+
+.video-slider{
+    display:flex;
+    gap:20px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding:20px;
+}
+
+.video-slider::-webkit-scrollbar{
+    display:none;
+}
+
+.video-card{
+    min-width:450px;
+    max-width:450px;
+}
+
+.video-card iframe{
+    width:100%;
+    aspect-ratio:16/9;
+    border:none;
+    border-radius:20px;
 }
