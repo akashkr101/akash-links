@@ -62,6 +62,14 @@ document.getElementById("bucketList").innerHTML +=
 function openDestination(index){
 
 const place = destinations[index];
+document.body.style.backgroundImage =
+`
+linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.85)
+),
+url('${place.background}')
+`;
 
 let gallery = "";
 
@@ -142,6 +150,15 @@ function closeModal(){
 document.getElementById("destinationModal").style.display =
 "none";
 
+document.body.style.backgroundImage =
+`
+linear-gradient(
+rgba(0,0,0,.65),
+rgba(0,0,0,.85)
+),
+url('images/kashmir/hero.jpg')
+`;
+
 }
 
 function openImage(src){
@@ -159,3 +176,23 @@ document.getElementById("lightbox").style.display =
 "none";
 
 };
+
+let currentBg = 0;
+
+setInterval(()=>{
+
+currentBg++;
+
+if(currentBg >= destinations.length)
+currentBg = 0;
+
+document.body.style.backgroundImage =
+`
+linear-gradient(
+rgba(0,0,0,.70),
+rgba(0,0,0,.85)
+),
+url('${destinations[currentBg].background}')
+`;
+
+},5000);
