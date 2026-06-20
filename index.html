@@ -3,108 +3,145 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Accelerate Clicks</title>
+    <title>Accelerate Clicks</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<header class="hero">
+    <!-- HERO SECTION -->
 
-<div class="hero-overlay">
+    <header class="hero">
 
-<img id="profileImage" class="profile-image">
+        <div class="hero-overlay">
 
-<h1 id="brand"></h1>
+            <img id="profileImage" class="profile-image" alt="Profile">
 
-<h2 id="name"></h2>
+            <h1 id="brand"></h1>
 
-<p id="tagline"></p>
+            <h2 id="name"></h2>
 
-<div id="socials" class="socials"></div>
+            <p id="tagline"></p>
 
-<a href="#journeyContainer" class="explore-btn">
-Explore My Journey
-</a>
+            <div id="socials" class="socials"></div>
 
-</div>
+            <a href="#journeyContainer" class="explore-btn">
+                Explore My Journey
+            </a>
 
-</header>
+        </div>
 
-<section class="stats">
+    </header>
 
-<div class="stat-card">
-<h2 id="yearCount">0</h2>
-<p>Years</p>
-</div>
+    <!-- STATS -->
 
-<div class="stat-card">
-<h2 id="destinationCount">0</h2>
-<p>Destinations</p>
-</div>
+    <section class="stats">
 
-<div class="stat-card">
-<h2 id="photoCount">0</h2>
-<p>Photos</p>
-</div>
+        <div class="stat-card">
 
-<div class="stat-card">
-<h2 id="videoCount">0</h2>
-<p>Videos</p>
-</div>
+            <h2 id="yearCount">0</h2>
 
-</section>
+            <p>Years</p>
 
-<section id="journeyContainer">
+        </div>
 
-<h2 class="section-title">
-Travel Timeline
-</h2>
+        <div class="stat-card">
 
-</section>
+            <h2 id="destinationCount">0</h2>
 
-<section class="bucket">
+            <p>Destinations</p>
 
-<h2 class="section-title">
-Upcoming Adventures
-</h2>
+        </div>
 
-<ul id="bucketList"></ul>
+        <div class="stat-card">
 
-</section>
+            <h2 id="photoCount">0</h2>
 
-<footer>
+            <p>Photos</p>
 
-<p>© Accelerate Clicks</p>
+        </div>
 
-</footer>
+        <div class="stat-card">
 
-<div id="destinationModal" class="modal">
+            <h2 id="videoCount">0</h2>
 
-<span class="close" onclick="closeModal()">
-&times;
-</span>
+            <p>Reels</p>
 
-<div id="modalContent"></div>
+        </div>
 
-</div>
+    </section>
 
-<div id="lightbox" class="lightbox">
+    <!-- TIMELINE -->
 
-<img id="lightboxImg">
+    <section id="journeyContainer">
 
-</div>
+        <h2 class="section-title">
+            Travel Timeline
+        </h2>
 
-<script src="data.js"></script>
-<script src="script.js"></script>
+        <!-- Generated dynamically from data.js -->
+
+    </section>
+
+    <!-- BUCKET LIST -->
+
+    <section class="bucket">
+
+        <h2 class="section-title">
+            Upcoming Adventures
+        </h2>
+
+        <ul id="bucketList"></ul>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © Accelerate Clicks | Travel • Photography • Stories
+        </p>
+
+    </footer>
+
+    <!-- DESTINATION MODAL -->
+
+    <div id="destinationModal" class="modal">
+
+        <span class="close" onclick="closeModal()">
+            &times;
+        </span>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+    <!-- IMAGE LIGHTBOX -->
+
+    <div id="lightbox" class="lightbox">
+
+        <img id="lightboxImg" alt="Travel Photo">
+
+    </div>
+
+    <!-- DATA -->
+
+    <script src="data.js"></script>
+
+    <!-- LOGIC -->
+
+    <script src="script.js"></script>
 
 </body>
 

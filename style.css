@@ -26,7 +26,7 @@ body{
     transition:all 1s ease;
 }
 
-/* Floating Glow Effects */
+/* Glow Effects */
 
 body::before{
     content:"";
@@ -34,14 +34,10 @@ body::before{
     width:500px;
     height:500px;
     border-radius:50%;
-
     background:rgba(0,180,255,.15);
-
     filter:blur(150px);
-
     top:-200px;
     left:-200px;
-
     z-index:-1;
 }
 
@@ -51,14 +47,10 @@ body::after{
     width:500px;
     height:500px;
     border-radius:50%;
-
     background:rgba(255,0,128,.12);
-
     filter:blur(150px);
-
     bottom:-200px;
     right:-200px;
-
     z-index:-1;
 }
 
@@ -66,13 +58,10 @@ body::after{
 
 .hero{
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
     padding:40px;
 }
 
@@ -83,13 +72,9 @@ body::after{
 .profile-image{
     width:180px;
     height:180px;
-
     border-radius:50%;
-
     object-fit:cover;
-
     border:5px solid rgba(255,255,255,.2);
-
     box-shadow:0 0 50px rgba(255,255,255,.25);
 }
 
@@ -114,43 +99,30 @@ body::after{
 
 .socials a{
     display:inline-block;
-
     margin:8px;
     padding:12px 22px;
-
     text-decoration:none;
     color:white;
-
     border-radius:30px;
-
     background:rgba(255,255,255,.1);
-
     backdrop-filter:blur(10px);
-
     transition:.3s;
 }
 
 .socials a:hover{
     background:#00d4ff;
     color:black;
-
     transform:translateY(-4px);
 }
 
 .explore-btn{
     display:inline-block;
-
     margin-top:30px;
-
     background:#00d4ff;
     color:black;
-
     padding:15px 30px;
-
     border-radius:40px;
-
     text-decoration:none;
-
     font-weight:600;
 }
 
@@ -159,24 +131,17 @@ body::after{
 .stats{
     max-width:1200px;
     margin:auto;
-
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
     gap:20px;
-
     padding:50px 20px;
 }
 
 .stat-card{
     text-align:center;
-
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(10px);
-
     border-radius:20px;
-
     padding:25px;
 }
 
@@ -185,75 +150,61 @@ body::after{
     font-size:2rem;
 }
 
-/* SECTION TITLE */
+/* TITLES */
 
 .section-title{
     text-align:center;
     font-size:2.5rem;
-
     margin:60px 0 30px;
 }
 
-/* YEAR SECTION */
-
 .year-section{
     margin-bottom:80px;
+    animation:fadeUp .8s ease;
 }
 
 .year-title{
     font-size:2rem;
-
     margin-left:40px;
     margin-bottom:20px;
 }
 
-/* SLIDER */
+/* CAROUSEL */
 
 .slider-wrapper{
-    position:relative;
-
     display:flex;
     align-items:center;
+    gap:10px;
+    width:100%;
 }
 
 .slider-btn{
-    width:60px;
-    height:60px;
-
+    width:55px;
+    height:55px;
     border:none;
-
     border-radius:50%;
-
-    background:rgba(255,255,255,.15);
-
+    background:rgba(255,255,255,.12);
     color:white;
-
     cursor:pointer;
-
-    font-size:25px;
-
-    margin:0 10px;
-
-    backdrop-filter:blur(10px);
+    font-size:24px;
+    flex-shrink:0;
+    transition:.3s;
 }
 
 .slider-btn:hover{
     background:#00d4ff;
     color:black;
+    transform:scale(1.08);
 }
 
 .destination-slider{
     display:flex;
-
     gap:20px;
-
     overflow-x:auto;
-
     scroll-behavior:smooth;
-
     scrollbar-width:none;
-
-    padding:10px 10px 20px;
+    scroll-snap-type:x mandatory;
+    padding:10px;
 }
 
 .destination-slider::-webkit-scrollbar{
@@ -276,17 +227,27 @@ body::after{
 
     cursor:pointer;
 
-    transition:.4s;
+    scroll-snap-align:start;
+
+    transition:
+    transform .5s ease,
+    box-shadow .5s ease;
+
+    animation:fadeUp .8s ease;
 }
 
 .destination-card:hover{
-    transform:translateY(-10px);
+    transform:
+    translateY(-10px)
+    scale(1.03);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.4);
 }
 
 .destination-card img{
     width:100%;
     height:220px;
-
     object-fit:cover;
 }
 
@@ -304,12 +265,8 @@ body::after{
 
 .destination-stats{
     margin-top:15px;
-
     display:flex;
     justify-content:space-between;
-
-    font-size:.9rem;
-
     color:#00d4ff;
 }
 
@@ -318,7 +275,6 @@ body::after{
 .bucket{
     max-width:1000px;
     margin:auto;
-
     padding:50px 20px;
 }
 
@@ -328,11 +284,8 @@ body::after{
 
 .bucket li{
     background:rgba(255,255,255,.08);
-
     padding:15px;
-
     margin-bottom:15px;
-
     border-radius:15px;
 }
 
@@ -340,28 +293,20 @@ body::after{
 
 .modal{
     display:none;
-
     position:fixed;
-
     inset:0;
-
     background:black;
-
     overflow:auto;
-
     z-index:9999;
+    animation:fadeUp .4s ease;
 }
 
 .close{
     position:fixed;
-
     right:30px;
     top:20px;
-
     font-size:50px;
-
     cursor:pointer;
-
     z-index:10000;
 }
 
@@ -369,49 +314,29 @@ body::after{
 
 .gallery{
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
     gap:15px;
-
     padding:20px;
 }
 
 .gallery img{
     width:100%;
     height:300px;
-
     object-fit:cover;
-
     border-radius:15px;
-
     cursor:pointer;
 }
 
-/* VIDEOS */
-
-.video-grid{
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-
-    gap:20px;
-
-    padding:20px;
-}
-
-.video-grid video{
-    width:100%;
-
-    border-radius:15px;
-}
+/* REELS */
 
 .video-slider{
     display:flex;
-    gap:20px;
+    align-items:flex-start;
+    gap:15px;
     overflow-x:auto;
+    scroll-behavior:smooth;
     scrollbar-width:none;
-    padding:20px 0;
+    padding:20px;
 }
 
 .video-slider::-webkit-scrollbar{
@@ -419,13 +344,18 @@ body::after{
 }
 
 .video-card{
-    min-width:450px;
-    max-width:450px;
+    flex:0 0 auto;
+    width:200px;
+    transition:.3s;
+}
+
+.video-card:hover{
+    transform:translateY(-8px);
 }
 
 .video-card iframe{
-    width:100%;
-    aspect-ratio:16/9;
+    width:200px;
+    height:355px;
     border:none;
     border-radius:20px;
 }
@@ -434,16 +364,11 @@ body::after{
 
 .lightbox{
     display:none;
-
     position:fixed;
-
     inset:0;
-
     background:rgba(0,0,0,.95);
-
     justify-content:center;
     align-items:center;
-
     z-index:10000;
 }
 
@@ -456,8 +381,23 @@ body::after{
 
 footer{
     text-align:center;
-
     padding:50px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 /* MOBILE */
@@ -477,28 +417,13 @@ footer{
         display:none;
     }
 
-}
+    .video-card{
+        width:170px;
+    }
 
-.video-slider{
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-    scrollbar-width:none;
-    padding:20px;
-}
+    .video-card iframe{
+        width:170px;
+        height:300px;
+    }
 
-.video-slider::-webkit-scrollbar{
-    display:none;
-}
-
-.video-card{
-    min-width:450px;
-    max-width:450px;
-}
-
-.video-card iframe{
-    width:100%;
-    aspect-ratio:16/9;
-    border:none;
-    border-radius:20px;
 }

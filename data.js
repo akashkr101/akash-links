@@ -2,7 +2,6 @@ const profile = {
     name: "Akash Kumar",
     brand: "Accelerate Clicks",
     tagline: "Travel • Photography • Stories",
-
     image: "profile/profile.jpg",
 
     socials: {
@@ -38,13 +37,16 @@ const journeys = [
             ],
 
             videos: [
-
-                "https://www.youtube.com/embed/FSviQkRsAuw",
-                "https://www.youtube.com/embed/gjNuiHAkhYU",
-                "https://www.youtube.com/embed/iFEmMyaSw1I",
-                "https://www.youtube.com/embed/3P7OCa45TLo",
-                "https://www.youtube.com/embed/oNZTuyWb88o"
-
+            "https://www.youtube.com/embed/FSviQkRsAuw?autoplay=1&mute=1&loop=1&playlist=FSviQkRsAuw&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/gjNuiHAkhYU?autoplay=1&mute=1&loop=1&playlist=gjNuiHAkhYU&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/iFEmMyaSw1I?autoplay=1&mute=1&loop=1&playlist=iFEmMyaSw1I&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/3P7OCa45TLo?autoplay=1&mute=1&loop=1&playlist=3P7OCa45TLo&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/oNZTuyWb88o?autoplay=1&mute=1&loop=1&playlist=oNZTuyWb88o&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/FSviQkRsAuw?autoplay=1&mute=1&loop=1&playlist=FSviQkRsAuw&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/gjNuiHAkhYU?autoplay=1&mute=1&loop=1&playlist=gjNuiHAkhYU&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/iFEmMyaSw1I?autoplay=1&mute=1&loop=1&playlist=iFEmMyaSw1I&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/3P7OCa45TLo?autoplay=1&mute=1&loop=1&playlist=3P7OCa45TLo&controls=0&rel=0&playsinline=1&modestbranding=1",
+            "https://www.youtube.com/embed/oNZTuyWb88o?autoplay=1&mute=1&loop=1&playlist=oNZTuyWb88o&controls=0&rel=0&playsinline=1&modestbranding=1"
             ]
         },
 

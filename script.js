@@ -35,7 +35,7 @@ document.getElementById("journeyContainer");
 
 journeys.forEach((yearData, yearIndex) => {
 
-    let yearSection = document.createElement("div");
+    const yearSection = document.createElement("div");
 
     yearSection.className = "year-section";
 
@@ -116,6 +116,8 @@ journeys.forEach((yearData, yearIndex) => {
         `;
     });
 
+    startDestinationAutoScroll(slider);
+
 });
 
 // =====================
@@ -146,15 +148,16 @@ bucketList.forEach(item => {
 });
 
 // =====================
-// SLIDER BUTTONS
+// DESTINATION SLIDER
 // =====================
 
 function slideLeft(index){
 
-    document
-    .getElementById(`slider-${index}`)
-    .scrollBy({
-        left:-500,
+    const slider =
+    document.getElementById(`slider-${index}`);
+
+    slider.scrollBy({
+        left:-360,
         behavior:"smooth"
     });
 
@@ -162,11 +165,52 @@ function slideLeft(index){
 
 function slideRight(index){
 
-    document
-    .getElementById(`slider-${index}`)
-    .scrollBy({
-        left:500,
+    const slider =
+    document.getElementById(`slider-${index}`);
+
+    slider.scrollBy({
+        left:360,
         behavior:"smooth"
+    });
+
+}
+
+function startDestinationAutoScroll(slider){
+
+    let autoScroll = setInterval(() => {
+
+        if(
+            slider.scrollLeft + slider.clientWidth >=
+            slider.scrollWidth - 20
+        ){
+
+            slider.scrollTo({
+                left:0,
+                behavior:"smooth"
+            });
+
+        }
+        else{
+
+            slider.scrollBy({
+                left:360,
+                behavior:"smooth"
+            });
+
+        }
+
+    },1500);
+
+    slider.addEventListener("mouseenter",()=>{
+
+        clearInterval(autoScroll);
+
+    });
+
+    slider.addEventListener("mouseleave",()=>{
+
+        startDestinationAutoScroll(slider);
+
     });
 
 }
@@ -174,6 +218,8 @@ function slideRight(index){
 // =====================
 // OPEN DESTINATION
 // =====================
+
+let currentVideoInterval = null;
 
 function openDestination(place){
 
@@ -202,28 +248,27 @@ function openDestination(place){
 
     });
 
-    // YOUTUBE VIDEOS
+    // VIDEOS
 
     let videos = "";
 
     place.videos.forEach(video => {
 
-    videos += `
+        videos += `
 
-    <div class="video-card">
+        <div class="video-card">
 
-        <iframe
-            src="${video}"
-            title="Travel Reel"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen>
-        </iframe>
+            <iframe
+                src="${video}"
+                title="Travel Reel"
+                loading="lazy"
+                allowfullscreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+            </iframe>
 
-    </div>
+        </div>
 
-    `;
+        `;
 
     });
 
@@ -262,9 +307,27 @@ function openDestination(place){
                 Travel Reels
             </h2>
 
-            <div class="video-slider">
+            <div class="slider-wrapper">
 
-                ${videos}
+                <button
+                class="slider-btn"
+                onclick="videoSlideLeft()">
+                ❮
+                </button>
+
+                <div
+                class="video-slider"
+                id="videoSlider">
+
+                    ${videos}
+
+                </div>
+
+                <button
+                class="slider-btn"
+                onclick="videoSlideRight()">
+                ❯
+                </button>
 
             </div>
 
@@ -279,6 +342,91 @@ function openDestination(place){
     "destinationModal"
     ).style.display = "block";
 
+    startVideoAutoScroll();
+
+}
+
+// =====================
+// VIDEO CAROUSEL
+// =====================
+
+function videoSlideLeft(){
+
+    const slider =
+    document.getElementById("videoSlider");
+
+    if(!slider) return;
+
+    slider.scrollBy({
+        left:-210,
+        behavior:"smooth"
+    });
+
+}
+
+function videoSlideRight(){
+
+    const slider =
+    document.getElementById("videoSlider");
+
+    if(!slider) return;
+
+    slider.scrollBy({
+        left:210,
+        behavior:"smooth"
+    });
+
+}
+
+function startVideoAutoScroll(){
+
+    const slider =
+    document.getElementById("videoSlider");
+
+    if(!slider) return;
+
+    if(currentVideoInterval){
+
+        clearInterval(currentVideoInterval);
+
+    }
+
+    currentVideoInterval = setInterval(() => {
+
+        if(
+            slider.scrollLeft + slider.clientWidth >=
+            slider.scrollWidth - 20
+        ){
+
+            slider.scrollTo({
+                left:0,
+                behavior:"smooth"
+            });
+
+        }
+        else{
+
+            slider.scrollBy({
+                left:210,
+                behavior:"smooth"
+            });
+
+        }
+
+    },3500);
+
+    slider.addEventListener("mouseenter",()=>{
+
+        clearInterval(currentVideoInterval);
+
+    });
+
+    slider.addEventListener("mouseleave",()=>{
+
+        startVideoAutoScroll();
+
+    });
+
 }
 
 // =====================
@@ -287,6 +435,12 @@ function openDestination(place){
 
 function closeModal(){
 
+    if(currentVideoInterval){
+
+        clearInterval(currentVideoInterval);
+
+    }
+
     document.getElementById(
     "destinationModal"
     ).style.display = "none";
@@ -294,7 +448,7 @@ function closeModal(){
 }
 
 // =====================
-// IMAGE LIGHTBOX
+// LIGHTBOX
 // =====================
 
 function openImage(src){
@@ -316,5 +470,22 @@ document.getElementById(
     document.getElementById(
     "lightbox"
     ).style.display = "none";
+
+};
+
+// =====================
+// CLOSE MODAL ON OUTSIDE CLICK
+// =====================
+
+window.onclick = function(event){
+
+    const modal =
+    document.getElementById("destinationModal");
+
+    if(event.target === modal){
+
+        closeModal();
+
+    }
 
 };
