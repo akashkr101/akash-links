@@ -18,18 +18,18 @@ const destinations = [
 {
     name: "Kashmir",
     description: "Snow-covered mountains, frozen rivers and unforgettable adventures.",
-    hero: "images/kashmir/hero.jpg",
+    hero: "images/Kashmir/hero.jpg",
     images: [
-        "images/kashmir/gallery1.jpg",
-        "images/kashmir/gallery2.jpg",
-        "images/kashmir/gallery3.jpg",
-        "images/kashmir/gallery4.jpg",
-        "images/kashmir/gallery5.jpg",
-        "images/kashmir/gallery6.jpg",
-        "images/kashmir/gallery7.jpg"
+        "images/Kashmir/gallery1.jpg",
+        "images/Kashmir/gallery2.jpg",
+        "images/Kashmir/gallery3.jpg",
+        "images/Kashmir/gallery4.jpg",
+        "images/Kashmir/gallery5.jpg",
+        "images/Kashmir/gallery6.jpg",
+        "images/Kashmir/gallery7.jpg"
     ],
     videos: [
-        "videos/kashmir/reel1.mp4"
+        "videos/Kashmir/reel1.mp4"
     ]
 },
 
