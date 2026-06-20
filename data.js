@@ -56,6 +56,26 @@ const destinations = [
     ],
 
     videos:[]
+},
+
+{
+    name: "Manali",
+    description: "Snowy mountains, winding roads and unforgettable adventures.",
+
+    background: "images/manali/hero.jpg",
+
+    hero: "images/manali/hero.jpg",
+
+    images: [
+        "images/manali/gallery1.jpg",
+        "images/manali/gallery2.jpg",
+        "images/manali/gallery3.jpg"
+    ],
+
+    videos: [
+        "videos/manali/reel1.mp4",
+        "videos/manali/reel2.mp4"
+    ]
 }
 
 ];
