@@ -1,50 +1,118 @@
+// PROFILE
+
 document.getElementById("brand").innerText = profile.brand;
 document.getElementById("name").innerText = profile.name;
 document.getElementById("tagline").innerText = profile.tagline;
+document.getElementById("profileImage").src = profile.image;
 
-document.getElementById("profileImage").src =
-profile.image;
+// SOCIALS
 
-const socials = document.getElementById("socials");
-
-socials.innerHTML = `
+document.getElementById("socials").innerHTML = `
 <a href="${profile.socials.instagram}" target="_blank">Instagram</a>
 <a href="${profile.socials.youtube}" target="_blank">YouTube</a>
 <a href="${profile.socials.facebook}" target="_blank">Facebook</a>
 <a href="${profile.socials.snapchat}" target="_blank">Snapchat</a>
 `;
 
+// COUNTERS
+
+let totalDestinations = 0;
 let totalPhotos = 0;
 let totalVideos = 0;
 
-const grid =
-document.getElementById("destinationGrid");
+// TIMELINE
 
-destinations.forEach((place,index)=>{
+const journeyContainer =
+document.getElementById("journeyContainer");
 
-totalPhotos += place.images.length;
-totalVideos += place.videos.length;
+journeys.forEach((yearData, yearIndex) => {
 
-grid.innerHTML += `
-<div class="card" onclick="openDestination(${index})">
+    let yearSection = document.createElement("div");
+    yearSection.className = "year-section";
 
-<img src="${place.hero}">
+    yearSection.innerHTML = `
+        <h2 class="year-title">
+            ${yearData.year} Journey
+        </h2>
 
-<div class="overlay">
+        <div class="slider-wrapper">
 
-<h3>${place.name}</h3>
+            <button
+            class="slider-btn"
+            onclick="slideLeft(${yearIndex})">
+            ❮
+            </button>
 
-<p>${place.description}</p>
+            <div
+            class="destination-slider"
+            id="slider-${yearIndex}">
+            </div>
 
-</div>
+            <button
+            class="slider-btn"
+            onclick="slideRight(${yearIndex})">
+            ❯
+            </button>
 
-</div>
-`;
+        </div>
+    `;
 
+    journeyContainer.appendChild(yearSection);
+
+    const slider =
+    document.getElementById(`slider-${yearIndex}`);
+
+    yearData.destinations.forEach((place) => {
+
+        totalDestinations++;
+        totalPhotos += place.images.length;
+        totalVideos += place.videos.length;
+
+        slider.innerHTML += `
+
+        <div
+        class="destination-card"
+        onclick='openDestination(${JSON.stringify(place)})'>
+
+            <img src="${place.hero}">
+
+            <div class="destination-content">
+
+                <h3>
+                    📍 ${place.name}
+                </h3>
+
+                <p>
+                    ${place.description}
+                </p>
+
+                <div class="destination-stats">
+
+                    <span>
+                        📸 ${place.images.length}
+                    </span>
+
+                    <span>
+                        🎥 ${place.videos.length}
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+    });
 });
 
+// STATS
+
+document.getElementById("yearCount").innerText =
+journeys.length;
+
 document.getElementById("destinationCount").innerText =
-destinations.length;
+totalDestinations;
 
 document.getElementById("photoCount").innerText =
 totalPhotos;
@@ -52,147 +120,154 @@ totalPhotos;
 document.getElementById("videoCount").innerText =
 totalVideos;
 
-bucketList.forEach(item=>{
+// BUCKET LIST
 
-document.getElementById("bucketList").innerHTML +=
-`<li>✈ ${item}</li>`;
+bucketList.forEach(item => {
 
-});
-
-function openDestination(index){
-
-const place = destinations[index];
-document.body.style.backgroundImage =
-`
-linear-gradient(
-rgba(0,0,0,.75),
-rgba(0,0,0,.85)
-),
-url('${place.background}')
-`;
-
-let gallery = "";
-
-place.images.forEach(img=>{
-
-gallery += `
-<img src="${img}" onclick="openImage('${img}')">
-`;
+    document.getElementById("bucketList").innerHTML +=
+    `<li>✈ ${item}</li>`;
 
 });
 
-let videos = "";
+// SLIDER BUTTONS
 
-place.videos.forEach(video=>{
+function slideLeft(index){
 
-videos += `
-<video controls>
-<source src="${video}" type="video/mp4">
-</video>
-`;
+    document
+    .getElementById(`slider-${index}`)
+    .scrollBy({
+        left:-400,
+        behavior:"smooth"
+    });
 
-});
-
-window.scrollTo({
-    top:0,
-    behavior:"smooth"
-});
-
-document.getElementById("modalContent").innerHTML = `
-
-<div class="hero-destination">
-
-<img src="${place.hero}">
-
-<div class="hero-text">
-
-<h1>${place.name}</h1>
-
-<p>${place.description}</p>
-
-</div>
-
-</div>
-
-<h2>Gallery</h2>
-
-<div class="gallery">
-
-${gallery}
-
-</div>
-
-${
-place.videos.length
-?
-`
-<h2>Travel Reels</h2>
-
-<div class="video-grid">
-
-${videos}
-
-</div>
-`
-:
-""
 }
 
-`;
+function slideRight(index){
 
-document.getElementById("destinationModal").style.display =
-"block";
+    document
+    .getElementById(`slider-${index}`)
+    .scrollBy({
+        left:400,
+        behavior:"smooth"
+    });
 
 }
+
+// OPEN DESTINATION
+
+function openDestination(place){
+
+    document.body.style.backgroundImage =
+    `
+    linear-gradient(
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.85)
+    ),
+    url('${place.hero}')
+    `;
+
+    let gallery = "";
+
+    place.images.forEach(img => {
+
+        gallery += `
+        <img
+        src="${img}"
+        onclick="openImage('${img}')">
+        `;
+
+    });
+
+    let videos = "";
+
+    place.videos.forEach(video => {
+
+        videos += `
+        <video controls>
+            <source
+            src="${video}"
+            type="video/mp4">
+        </video>
+        `;
+
+    });
+
+    document.getElementById("modalContent").innerHTML = `
+
+        <div style="padding:30px">
+
+            <h1>
+                ${place.name}
+            </h1>
+
+            <p style="margin-top:10px">
+                ${place.description}
+            </p>
+
+        </div>
+
+        <div class="gallery">
+
+            ${gallery}
+
+        </div>
+
+        ${
+            place.videos.length > 0
+            ?
+            `
+            <h2 style="padding:20px">
+                Travel Reels
+            </h2>
+
+            <div class="video-grid">
+
+                ${videos}
+
+            </div>
+            `
+            :
+            ""
+        }
+
+    `;
+
+    document.getElementById(
+    "destinationModal"
+    ).style.display = "block";
+
+}
+
+// CLOSE MODAL
 
 function closeModal(){
 
-document.getElementById("destinationModal").style.display =
-"none";
-
-document.body.style.backgroundImage =
-`
-linear-gradient(
-rgba(0,0,0,.65),
-rgba(0,0,0,.85)
-),
-url('images/kashmir/hero.jpg')
-`;
+    document.getElementById(
+    "destinationModal"
+    ).style.display = "none";
 
 }
+
+// LIGHTBOX
 
 function openImage(src){
 
-document.getElementById("lightbox").style.display =
-"flex";
+    document.getElementById(
+    "lightbox"
+    ).style.display = "flex";
 
-document.getElementById("lightboxImg").src = src;
+    document.getElementById(
+    "lightboxImg"
+    ).src = src;
 
 }
 
-document.getElementById("lightbox").onclick = () => {
+document.getElementById(
+"lightbox"
+).onclick = () => {
 
-document.getElementById("lightbox").style.display =
-"none";
+    document.getElementById(
+    "lightbox"
+    ).style.display = "none";
 
 };
-
-let currentBg = 0;
-
-setInterval(()=>{
-
-currentBg++;
-
-if(currentBg >= destinations.length)
-currentBg = 0;
-
-document.body.style.backgroundImage =
-`
-linear-gradient(
-rgba(0,0,0,.70),
-rgba(0,0,0,.85)
-),
-url('${destinations[currentBg].background}')
-`;
-
-},5000);

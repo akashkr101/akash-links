@@ -1,38 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Accelerate Clicks</title>
 
-<link rel="stylesheet" href="style.css">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="style.css">
+
 </head>
-
-<script>
-window.addEventListener('scroll',()=>{
-
-    const cards =
-    document.querySelectorAll('.card');
-
-    cards.forEach(card=>{
-
-        const rect =
-        card.getBoundingClientRect();
-
-        if(rect.top < window.innerHeight-100){
-
-            card.style.opacity='1';
-            card.style.transform='translateY(0)';
-        }
-
-    });
-
-});
-</script>
 
 <body>
 
@@ -47,13 +28,10 @@ window.addEventListener('scroll',()=>{
 <h2 id="name"></h2>
 
 <p id="tagline"></p>
-<p class="travel-quote">
-"Collecting moments, not things."
-</p>
 
-<div class="socials" id="socials"></div>
+<div id="socials" class="socials"></div>
 
-<a href="#destinations" class="explore-btn">
+<a href="#journeyContainer" class="explore-btn">
 Explore My Journey
 </a>
 
@@ -62,6 +40,11 @@ Explore My Journey
 </header>
 
 <section class="stats">
+
+<div class="stat-card">
+<h2 id="yearCount">0</h2>
+<p>Years</p>
+</div>
 
 <div class="stat-card">
 <h2 id="destinationCount">0</h2>
@@ -78,20 +61,13 @@ Explore My Journey
 <p>Videos</p>
 </div>
 
-<div class="stat-card">
-<h2>∞</h2>
-<p>Memories</p>
-</div>
-
 </section>
 
-<section id="destinations">
+<section id="journeyContainer">
 
 <h2 class="section-title">
-Explore Destinations
+Travel Timeline
 </h2>
-
-<div id="destinationGrid" class="destination-grid"></div>
 
 </section>
 
@@ -131,4 +107,5 @@ Upcoming Adventures
 <script src="script.js"></script>
 
 </body>
+
 </html>

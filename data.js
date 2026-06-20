@@ -2,7 +2,7 @@ const profile = {
     name: "Akash Kumar",
     brand: "Accelerate Clicks",
     tagline: "Travel • Photography • Stories",
-    bio: "Capturing moments from mountains, valleys, cities and roads less travelled.",
+
     image: "profile/profile.jpg",
 
     socials: {
@@ -13,77 +13,182 @@ const profile = {
     }
 };
 
-const destinations = [
+const journeys = [
 
 {
-    name: "Kashmir",
-    description: "Snow-covered mountains...",
-    background: "images/kashmir/hero.jpg",
+    year: "2026",
 
-    hero: "images/kashmir/hero.jpg",
+    destinations: [
 
-    images: [
-        "images/kashmir/gallery1.jpg",
-        "images/kashmir/gallery2.jpg"
-    ],
+        {
+            name: "Banaras",
 
-    videos:[]
+            description:
+            "Snowy mountains, winding roads and unforgettable adventures.",
+
+            hero:
+            "images/2026-banaras/hero.jpg",
+
+            images: [
+
+                "images/2026-banaras/gallery1.jpg",
+                "images/2026-banaras/gallery2.jpg",
+                "images/2026-banaras/gallery3.jpg"
+
+            ],
+
+            videos: [
+
+                "videos/2026-banaras/reel1.mp4",
+                "videos/2026-banaras/reel2.mp4"
+
+            ]
+        },
+
+        {
+            name: "Spiti Valley",
+
+            description:
+            "Cold desert mountains and breathtaking landscapes.",
+
+            hero:
+            "images/2026-lucknow/hero.jpg",
+
+            images: [
+
+                "images/2026-lucknow/gallery1.jpg",
+                "images/2026-lucknow/gallery2.jpg"
+
+            ],
+
+            videos: []
+        },
+
+        {
+            name: "Ladakh",
+
+            description:
+            "The ultimate road trip destination.",
+
+            hero:
+            "images/2026-noida/hero.jpg",
+
+            images: [
+
+                "images/2026-noida/gallery1.jpg",
+                "images/2026-noida/gallery2.jpg"
+
+            ],
+
+            videos: []
+        },
+
+        {
+            name: "Delhi",
+
+            description:
+            "The ultimate road trip destination.",
+
+            hero:
+            "images/2026-delhi/hero.jpg",
+
+            images: [
+
+                "images/2026-delhi/gallery1.jpg",
+                "images/2026-delhi/gallery2.jpg"
+
+            ],
+
+            videos: []
+        }
+
+    ]
 },
 
 {
-    name: "Nainital",
-    description: "Beautiful lakes...",
-    background: "images/nainital/hero.jpg",
+    year: "2025",
 
-    hero: "images/nainital/hero.jpg",
+    destinations: [
 
-    images:[
-        "images/nainital/gallery1.jpg"
-    ],
+        {
+            name: "Kashmir",
 
-    videos:[]
-},
+            description:
+            "Snow-covered mountains, frozen rivers and unforgettable adventures.",
 
-{
-    name: "Noida",
-    description: "Urban life...",
-    background: "images/noida/hero.jpg",
+            hero:
+            "images/2025-kashmir/hero.jpg",
 
-    hero: "images/noida/hero.jpg",
+            images: [
 
-    images:[
-        "images/noida/gallery1.jpg"
-    ],
+                "images/2025-kashmir/gallery1.jpg",
+                "images/2025-kashmir/gallery2.jpg",
+                "images/2025-kashmir/gallery3.jpg",
+                "images/2025-kashmir/gallery4.jpg",
+                "images/2025-kashmir/gallery5.jpg",
+                "images/2025-kashmir/gallery6.jpg",
+                "images/2025-kashmir/gallery7.jpg"
 
-    videos:[]
-},
+            ],
 
-{
-    name: "Manali",
-    description: "Snowy mountains, winding roads and unforgettable adventures.",
+            videos: [
 
-    background: "images/manali/hero.jpg",
+                "videos/2025-kashmir/reel1.mp4"
 
-    hero: "images/manali/hero.jpg",
+            ]
+        },
 
-    images: [
-        "images/manali/gallery1.jpg",
-        "images/manali/gallery2.jpg",
-        "images/manali/gallery3.jpg"
-    ],
+        {
+            name: "Nainital",
 
-    videos: [
-        "videos/manali/reel1.mp4",
-        "videos/manali/reel2.mp4"
+            description:
+            "Beautiful lakes and peaceful mountain views.",
+
+            hero:
+            "images/2025-nainital/hero.jpg",
+
+            images: [
+
+                "images/2025-nainital/gallery1.jpg",
+                "images/2025-nainital/gallery2.jpg"
+
+            ],
+
+            videos: []
+        },
+
+        {
+            name: "Noida",
+
+            description:
+            "Urban exploration and city life.",
+
+            hero:
+            "images/2025-noida/hero.jpg",
+
+            images: [
+
+                "images/2025-noida/gallery1.jpg"
+
+            ],
+
+            videos: []
+        }
+
     ]
 }
 
 ];
 
 const bucketList = [
-    "Ladakh",
+
+    "Japan",
+    "Switzerland",
+    "Ladakh Bike Trip",
     "Spiti Valley",
     "Meghalaya",
-    "Andaman",
-    "Tawang"
+    "Andaman Islands",
+    "Tawang",
+    "Kerala Backwaters"
+
 ];
