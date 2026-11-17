@@ -6,7 +6,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Accelerate Clicks</title>
+    <meta name="description"
+        content="Explore Akash Kumar's travel timeline, destination photo galleries, and travel reels from Accelerate Clicks.">
+    <meta name="theme-color" content="#070b14">
+    <link rel="canonical" href="https://akashkr101.github.io/akash-links/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Akash Kumar | Accelerate Clicks">
+    <meta property="og:description"
+        content="Travel, photography, and stories from Akash Kumar. Explore destination galleries and travel reels.">
+    <meta property="og:url" content="https://akashkr101.github.io/akash-links/">
+    <meta property="og:image"
+        content="https://akashkr101.github.io/akash-links/images/2026-banaras/hero.webp">
+    <meta property="og:image:alt" content="Travel photo from Akash Kumar's journey">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Akash Kumar | Accelerate Clicks">
+    <meta name="twitter:description"
+        content="Travel, photography, and stories from Akash Kumar. Explore destination galleries and travel reels.">
+    <meta name="twitter:image"
+        content="https://akashkr101.github.io/akash-links/images/2026-banaras/hero.webp">
+
+    <title>Akash Kumar | Accelerate Clicks — Travel &amp; Photography</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -19,13 +39,15 @@
 
 <body>
 
+    <a class="skip-link" href="#journeyContainer">Skip to travel timeline</a>
+
     <!-- HERO SECTION -->
 
     <header class="hero">
 
         <div class="hero-overlay">
 
-            <img id="profileImage" class="profile-image" alt="Profile">
+            <img id="profileImage" class="profile-image" alt="Portrait of Akash Kumar" fetchpriority="high">
 
             <h1 id="brand"></h1>
 
@@ -49,83 +71,88 @@
 
     <!-- STATS -->
 
-    <section class="stats">
+    <main>
 
-        <div class="stat-card">
+        <section class="stats" aria-label="Travel statistics">
 
-            <h2 id="yearCount">0</h2>
+            <div class="stat-card">
 
-            <p>Years</p>
+                <h2 id="yearCount">0</h2>
 
-        </div>
+                <p>Years</p>
 
-        <div class="stat-card">
+            </div>
 
-            <h2 id="destinationCount">0</h2>
+            <div class="stat-card">
 
-            <p>Destinations</p>
+                <h2 id="destinationCount">0</h2>
 
-        </div>
+                <p>Destinations</p>
 
-        <div class="stat-card">
+            </div>
 
-            <h2 id="photoCount">0</h2>
+            <div class="stat-card">
 
-            <p>Photos</p>
+                <h2 id="photoCount">0</h2>
 
-        </div>
+                <p>Photos</p>
 
-        <div class="stat-card">
+            </div>
 
-            <h2 id="videoCount">0</h2>
+            <div class="stat-card">
 
-            <p>Reels</p>
+                <h2 id="videoCount">0</h2>
 
-        </div>
+                <p>Reels</p>
 
-    </section>
+            </div>
 
-    <!-- TIMELINE -->
+        </section>
 
-    <section id="journeyContainer">
+        <!-- TIMELINE -->
 
-        <h2 class="section-title">
-            Travel Timeline
-        </h2>
+        <section id="journeyContainer" aria-labelledby="journeyTitle">
 
-        <!-- Generated dynamically from data.js -->
+            <h2 id="journeyTitle" class="section-title">
+                Travel Timeline
+            </h2>
 
-    </section>
+            <!-- Generated dynamically from data.js -->
 
-    <!-- BUCKET LIST -->
+        </section>
 
-    <section class="bucket">
+        <!-- BUCKET LIST -->
 
-        <h2 class="section-title">
-            Upcoming Adventures
-        </h2>
+        <section class="bucket" aria-labelledby="bucketTitle">
 
-        <ul id="bucketList"></ul>
+            <h2 id="bucketTitle" class="section-title">
+                Upcoming Adventures
+            </h2>
 
-    </section>
+            <ul id="bucketList"></ul>
+
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
 
     <footer>
 
         <p>
-            © Accelerate Clicks | Travel • Photography • Stories
+            © <span id="currentYear"></span> Accelerate Clicks | Travel • Photography • Stories
         </p>
 
     </footer>
 
     <!-- DESTINATION MODAL -->
 
-    <div id="destinationModal" class="modal">
+    <div id="destinationModal" class="modal" role="dialog" aria-modal="true"
+        aria-labelledby="modalTitle" aria-hidden="true" tabindex="-1">
 
-        <span class="close" onclick="closeModal()">
+        <button id="modalClose" class="close" type="button" aria-label="Close destination details">
             &times;
-        </span>
+        </button>
 
         <div id="modalContent"></div>
 
@@ -133,9 +160,27 @@
 
     <!-- IMAGE LIGHTBOX -->
 
-    <div id="lightbox" class="lightbox">
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true"
+        aria-label="Photo viewer" aria-hidden="true" tabindex="-1">
 
-        <img id="lightboxImg" alt="Travel Photo">
+        <button id="lightboxClose" class="lightbox-close" type="button" aria-label="Close photo viewer">
+            &times;
+        </button>
+
+        <button id="lightboxPrevious" class="lightbox-nav lightbox-previous" type="button"
+            aria-label="Previous photo">
+            &#10094;
+        </button>
+
+        <figure class="lightbox-figure">
+            <img id="lightboxImg" alt="">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+
+        <button id="lightboxNext" class="lightbox-nav lightbox-next" type="button"
+            aria-label="Next photo">
+            &#10095;
+        </button>
 
     </div>
 

@@ -10,12 +10,37 @@ html{
 }
 
 body{
+    min-width:320px;
+}
+
+.skip-link{
+    position:absolute;
+    top:10px;
+    left:10px;
+    z-index:20000;
+    padding:12px 16px;
+    border-radius:8px;
+    background:#00d4ff;
+    color:#071018;
+    transform:translateY(-150%);
+}
+
+.skip-link:focus{
+    transform:translateY(0);
+}
+
+:focus-visible{
+    outline:3px solid #00d4ff;
+    outline-offset:4px;
+}
+
+body{
     background:
     linear-gradient(
     rgba(0,0,0,.65),
     rgba(0,0,0,.85)
     ),
-    url("images/2025-kashmir/hero.jpg");
+    url("images/2025-kashmir/hero.webp");
 
     background-size:cover;
     background-position:center;
@@ -23,7 +48,6 @@ body{
 
     color:white;
 
-    transition:all 1s ease;
 }
 
 /* Glow Effects */
@@ -143,6 +167,11 @@ body::after{
     transform:translateY(-4px);
 }
 
+.socials a:focus-visible{
+    background:#00d4ff;
+    color:black;
+}
+
 .explore-btn{
     display:inline-block;
     margin-top:22px;
@@ -224,6 +253,12 @@ body::after{
     transform:scale(1.08);
 }
 
+.slider-btn:focus-visible,
+.destination-card:focus-visible{
+    outline:3px solid #00d4ff;
+    outline-offset:4px;
+}
+
 .destination-slider{
     display:flex;
     gap:20px;
@@ -241,21 +276,21 @@ body::after{
 /* DESTINATION CARD */
 
 .destination-card{
+    display:flex;
+    flex-direction:column;
     min-width:340px;
     max-width:340px;
-
+    padding:0;
+    border:0;
     overflow:hidden;
-
     border-radius:25px;
-
     background:rgba(255,255,255,.08);
-
     backdrop-filter:blur(15px);
-
+    color:white;
     cursor:pointer;
-
     scroll-snap-align:start;
-
+    text-align:left;
+    font:inherit;
     transition:
     transform .5s ease,
     box-shadow .5s ease;
@@ -271,26 +306,33 @@ body::after{
 }
 
 .destination-card img{
+    display:block;
     width:100%;
     height:220px;
     object-fit:cover;
+    flex-shrink:0;
 }
 
 .destination-content{
+    display:block;
     padding:20px;
 }
 
-.destination-content h3{
+.destination-title{
+    display:block;
     margin-bottom:10px;
+    font-size:1.17rem;
+    font-weight:600;
 }
 
-.destination-content p{
+.destination-description{
+    display:block;
     opacity:.9;
 }
 
 .destination-stats{
-    margin-top:15px;
     display:flex;
+    margin-top:15px;
     justify-content:space-between;
     color:#00d4ff;
 }
@@ -322,6 +364,7 @@ body::after{
     inset:0;
     background:black;
     overflow:auto;
+    overscroll-behavior:contain;
     z-index:9999;
     animation:fadeUp .4s ease;
 }
@@ -333,23 +376,62 @@ body::after{
     font-size:50px;
     cursor:pointer;
     z-index:10000;
+    padding:0 12px;
+    border:0;
+    background:transparent;
+    color:white;
+    line-height:1;
+}
+
+.modal-heading{
+    padding:30px 80px 20px 30px;
+}
+
+.modal-heading h1{
+    font-size:clamp(1.8rem,4vw,2.5rem);
+}
+
+.modal-heading p{
+    margin-top:10px;
+    color:rgba(255,255,255,.82);
+}
+
+.modal-section-title{
+    padding:20px;
 }
 
 /* GALLERY */
 
 .gallery{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));
+    align-items:start;
     gap:15px;
     padding:20px;
 }
 
-.gallery img{
+.gallery-item{
+    display:block;
+    width:100%;
+    padding:0;
+    overflow:hidden;
+    border:0;
+    border-radius:15px;
+    background:rgba(255,255,255,.08);
+    cursor:pointer;
+}
+
+.gallery-item img{
+    display:block;
     width:100%;
     height:300px;
     object-fit:cover;
-    border-radius:15px;
-    cursor:pointer;
+    transition:transform .25s ease;
+}
+
+.gallery-item:hover img,
+.gallery-item:focus-visible img{
+    transform:scale(1.025);
 }
 
 /* REELS */
@@ -395,11 +477,69 @@ body::after{
     justify-content:center;
     align-items:center;
     z-index:10000;
+    padding:70px 80px;
+}
+
+.lightbox-figure{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    max-width:100%;
+    max-height:100%;
 }
 
 .lightbox img{
+    display:block;
     max-width:90%;
-    max-height:90%;
+    max-height:calc(90vh - 90px);
+    object-fit:contain;
+}
+
+.lightbox-figure figcaption{
+    margin-top:12px;
+    color:rgba(255,255,255,.85);
+}
+
+.lightbox-close,
+.lightbox-nav{
+    position:absolute;
+    display:grid;
+    place-items:center;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:50%;
+    background:rgba(20,25,35,.75);
+    color:white;
+    cursor:pointer;
+}
+
+.lightbox-close{
+    top:18px;
+    right:22px;
+    width:48px;
+    height:48px;
+    font-size:32px;
+}
+
+.lightbox-nav{
+    top:50%;
+    width:52px;
+    height:52px;
+    font-size:20px;
+    transform:translateY(-50%);
+}
+
+.lightbox-previous{
+    left:20px;
+}
+
+.lightbox-next{
+    right:20px;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover{
+    background:#00d4ff;
+    color:#071018;
 }
 
 /* FOOTER */
@@ -428,6 +568,10 @@ footer{
 /* MOBILE */
 
 @media(max-width:768px){
+
+    body{
+        background-attachment:scroll;
+    }
 
     .hero h1{
         font-size:2.2rem;
@@ -465,4 +609,57 @@ footer{
         height:300px;
     }
 
+    .gallery{
+        grid-template-columns:1fr;
+        padding:12px;
+    }
+
+    .gallery-item img{
+        height:min(65vh,360px);
+    }
+
+    .lightbox{
+        padding:70px 54px;
+    }
+
+    .lightbox-previous{
+        left:8px;
+    }
+
+    .lightbox-next{
+        right:8px;
+    }
+
+    .lightbox-nav{
+        width:40px;
+        height:40px;
+    }
+
+    .modal-heading{
+        padding:76px 20px 16px;
+    }
+
+    .modal-section-title{
+        padding:16px 12px;
+    }
+
+    footer{
+        padding:32px 20px;
+    }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+    html{
+        scroll-behavior:auto;
+    }
+
+    *,
+    *::before,
+    *::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        scroll-behavior:auto !important;
+        transition-duration:.01ms !important;
+    }
 }

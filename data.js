@@ -2,7 +2,7 @@ const profile = {
     name: "Akash Kumar",
     brand: "Accelerate Clicks",
     tagline: "Travel • Photography • Stories",
-    image: "profile/34.jpg",
+    image: "profile/profile.webp",
     socials: [
         {
             platform: "Facebook",
@@ -56,16 +56,16 @@ const journeys = [
             "Snowy mountains, winding roads and unforgettable adventures.",
 
             hero:
-            "images/2026-banaras/hero.jpg",
+            "images/2026-banaras/hero.webp",
 
             images: [
 
-                "images/2026-banaras/1.jpg",
-                "images/2026-banaras/gallery1.jpg",
-                "images/2026-banaras/gallery2.jpg",
-                "images/2026-banaras/gallery3.jpg",
-                "images/2026-banaras/gallery6.jpg",
-                "images/2026-banaras/gallery7.jpg"
+                "images/2026-banaras/1.webp",
+                "images/2026-banaras/gallery1.webp",
+                "images/2026-banaras/gallery2.webp",
+                "images/2026-banaras/gallery3.webp",
+                "images/2026-banaras/gallery6.webp",
+                "images/2026-banaras/gallery7.webp"
 
             ],
 
@@ -90,16 +90,16 @@ const journeys = [
             "Cold desert mountains and breathtaking landscapes.",
 
             hero:
-            "images/2026-lucknow/hero.jpg",
+            "images/2026-lucknow/hero.webp",
 
             images: [
 
-                "images/2026-lucknow/1.jpg",
-                "images/2026-lucknow/2.jpg",
-                "images/2026-lucknow/3.jpg",
-                "images/2026-lucknow/gallery1.jpg",
-                "images/2026-lucknow/gallery3.jpg",
-                "images/2026-lucknow/gallery6.jpg"
+                "images/2026-lucknow/1.webp",
+                "images/2026-lucknow/2.webp",
+                "images/2026-lucknow/3.webp",
+                "images/2026-lucknow/gallery1.webp",
+                "images/2026-lucknow/gallery3.webp",
+                "images/2026-lucknow/gallery6.webp"
 
             ],
 
@@ -113,16 +113,16 @@ const journeys = [
             "The ultimate road trip destination.",
 
             hero:
-            "images/2026-noida/hero.jpg",
+            "images/2026-noida/hero.webp",
 
             images: [
 
-                "images/2026-noida/1.jpg",
-                "images/2026-noida/2.jpg",
-                "images/2026-noida/3.jpg",
-                "images/2026-noida/gallery1.jpg",
-                "images/2026-noida/gallery3.jpg",
-                "images/2026-noida/gallery6.jpg"
+                "images/2026-noida/1.webp",
+                "images/2026-noida/2.webp",
+                "images/2026-noida/3.webp",
+                "images/2026-noida/gallery1.webp",
+                "images/2026-noida/gallery3.webp",
+                "images/2026-noida/gallery6.webp"
 
             ],
 
@@ -136,16 +136,16 @@ const journeys = [
             "The ultimate road trip destination.",
 
             hero:
-            "images/2026-delhi/hero.jpg",
+            "images/2026-delhi/hero.webp",
 
             images: [
 
-                "images/2026-delhi/1.jpg",
-                "images/2026-delhi/2.jpg",
-                "images/2026-delhi/3.jpg",
-                "images/2026-delhi/gallery1.jpg",
-                "images/2026-delhi/gallery3.jpg",
-                "images/2026-delhi/gallery6.jpg"
+                "images/2026-delhi/1.webp",
+                "images/2026-delhi/2.webp",
+                "images/2026-delhi/3.webp",
+                "images/2026-delhi/gallery1.webp",
+                "images/2026-delhi/gallery3.webp",
+                "images/2026-delhi/gallery6.webp"
 
             ],
 
@@ -167,16 +167,16 @@ const journeys = [
             "Snow-covered mountains, frozen rivers and unforgettable adventures.",
 
             hero:
-            "images/2025-kashmir/hero.jpg",
+            "images/2025-kashmir/hero.webp",
 
             images: [
 
-                "images/2025-kashmir/1.jpg",
-                "images/2025-kashmir/2.jpg",
-                "images/2025-kashmir/gallery1.jpg",
-                "images/2025-kashmir/gallery2.jpg",
-                "images/2025-kashmir/gallery6.jpg",
-                "images/2025-kashmir/gallery7.jpg"
+                "images/2025-kashmir/1.webp",
+                "images/2025-kashmir/2.webp",
+                "images/2025-kashmir/gallery1.webp",
+                "images/2025-kashmir/gallery2.webp",
+                "images/2025-kashmir/gallery6.webp",
+                "images/2025-kashmir/gallery7.webp"
 
             ],
 
@@ -190,16 +190,16 @@ const journeys = [
             "Beautiful lakes and peaceful mountain views.",
 
             hero:
-            "images/2025-nainital/hero.jpg",
+            "images/2025-nainital/hero.webp",
 
             images: [
 
-                "images/2025-nainital/1.jpg",
-                "images/2025-nainital/2.jpg",
-                "images/2025-nainital/gallery1.jpg",
-                "images/2025-nainital/gallery2.jpg",
-                "images/2025-nainital/gallery5.jpg",
-                "images/2025-nainital/gallery6.jpg"
+                "images/2025-nainital/1.webp",
+                "images/2025-nainital/2.webp",
+                "images/2025-nainital/gallery1.webp",
+                "images/2025-nainital/gallery2.webp",
+                "images/2025-nainital/gallery5.webp",
+                "images/2025-nainital/gallery6.webp"
 
             ],
 
@@ -213,16 +213,16 @@ const journeys = [
             "Urban exploration and city life.",
 
             hero:
-            "images/2025-noida/hero.jpg",
+            "images/2025-noida/hero.webp",
 
             images: [
 
-                "images/2025-noida/1.jpg",
-                "images/2025-noida/2.jpg",
-                "images/2025-noida/gallery1.jpg",
-                "images/2025-noida/gallery2.jpg",
-                "images/2025-noida/gallery6.jpg",
-                "images/2025-noida/gallery7.jpg"
+                "images/2025-noida/1.webp",
+                "images/2025-noida/2.webp",
+                "images/2025-noida/gallery1.webp",
+                "images/2025-noida/gallery2.webp",
+                "images/2025-noida/gallery6.webp",
+                "images/2025-noida/gallery7.webp"
 
             ],
 
