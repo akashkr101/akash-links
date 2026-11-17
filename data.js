@@ -62,7 +62,9 @@ const journeys = [
 
                 "images/2026-banaras/gallery1.jpg",
                 "images/2026-banaras/gallery2.jpg",
-                "images/2026-banaras/gallery3.jpg"
+                "images/2026-banaras/gallery3.jpg",
+                "images/2026-banaras/gallery6.jpg",
+                "images/2026-banaras/gallery7.jpg"
 
             ],
 
@@ -92,7 +94,8 @@ const journeys = [
             images: [
 
                 "images/2026-lucknow/gallery1.jpg",
-                "images/2026-lucknow/gallery2.jpg"
+                "images/2026-lucknow/gallery3.jpg",
+                "images/2026-lucknow/gallery6.jpg"
 
             ],
 
@@ -111,7 +114,8 @@ const journeys = [
             images: [
 
                 "images/2026-noida/gallery1.jpg",
-                "images/2026-noida/gallery2.jpg"
+                "images/2026-noida/gallery3.jpg",
+                "images/2026-noida/gallery6.jpg"
 
             ],
 
@@ -130,7 +134,8 @@ const journeys = [
             images: [
 
                 "images/2026-delhi/gallery1.jpg",
-                "images/2026-delhi/gallery2.jpg"
+                "images/2026-delhi/gallery3.jpg",
+                "images/2026-delhi/gallery6.jpg"
 
             ],
 
@@ -156,17 +161,10 @@ const journeys = [
 
             images: [
 
-                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974704/gallery1_dhgspd.jpg",
-
-                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974713/gallery2_glaqj1.jpg",
-
-                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974708/gallery3_jisqor.jpg",
-
-                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974712/gallery4_bkeio8.jpg",
-
-                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974711/gallery5_op4vdi.jpg",
-
-                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974709/gallery_hbbyb1.jpg"
+                "images/2025-kashmir/gallery1.jpg",
+                "images/2025-kashmir/gallery2.jpg",
+                "images/2025-kashmir/gallery6.jpg",
+                "images/2025-kashmir/gallery7.jpg"
 
             ],
 
@@ -185,7 +183,9 @@ const journeys = [
             images: [
 
                 "images/2025-nainital/gallery1.jpg",
-                "images/2025-nainital/gallery2.jpg"
+                "images/2025-nainital/gallery2.jpg",
+                "images/2025-nainital/gallery5.jpg",
+                "images/2025-nainital/gallery6.jpg"
 
             ],
 
@@ -203,7 +203,10 @@ const journeys = [
 
             images: [
 
-                "images/2025-noida/gallery1.jpg"
+                "images/2025-noida/gallery1.jpg",
+                "images/2025-noida/gallery2.jpg",
+                "images/2025-noida/gallery6.jpg",
+                "images/2025-noida/gallery7.jpg"
 
             ],
 
