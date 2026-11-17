@@ -145,9 +145,6 @@ yearData.destinations.forEach(place => {
 
 });
 
-startDestinationAutoScroll(slider);
-
-
 });
 
 /* =====================
@@ -221,57 +218,9 @@ document
 
 }
 
-function startDestinationAutoScroll(slider){
-
-
-let interval = setInterval(() => {
-
-    if(
-        slider.scrollLeft +
-        slider.clientWidth >=
-        slider.scrollWidth - 10
-    ){
-
-        slider.scrollTo({
-
-            left:0,
-            behavior:"smooth"
-
-        });
-
-    }
-    else{
-
-        slider.scrollBy({
-
-            left:360,
-            behavior:"smooth"
-
-        });
-
-    }
-
-},3000);
-
-slider.addEventListener(
-"mouseenter",
-() => clearInterval(interval)
-);
-
-slider.addEventListener(
-"mouseleave",
-() => startDestinationAutoScroll(slider)
-);
-
-
-}
-
 /* =====================
 DESTINATION MODAL
 ===================== */
-
-let currentVideoInterval =
-null;
 
 function openDestination(place){
 
@@ -392,9 +341,6 @@ document.getElementById(
 ).style.display =
 "block";
 
-startVideoAutoScroll();
-
-
 }
 
 /* =====================
@@ -441,83 +387,11 @@ slider.scrollBy({
 
 }
 
-function startVideoAutoScroll(){
-
-
-const slider =
-document.getElementById(
-"videoSlider"
-);
-
-if(!slider) return;
-
-if(currentVideoInterval){
-
-    clearInterval(
-    currentVideoInterval
-    );
-
-}
-
-currentVideoInterval =
-setInterval(() => {
-
-    if(
-        slider.scrollLeft +
-        slider.clientWidth >=
-        slider.scrollWidth - 10
-    ){
-
-        slider.scrollTo({
-
-            left:0,
-            behavior:"smooth"
-
-        });
-
-    }
-    else{
-
-        slider.scrollBy({
-
-            left:220,
-            behavior:"smooth"
-
-        });
-
-    }
-
-},3500);
-
-slider.addEventListener(
-"mouseenter",
-() => clearInterval(
-    currentVideoInterval
-)
-);
-
-slider.addEventListener(
-"mouseleave",
-() => startVideoAutoScroll()
-);
-
-
-}
-
 /* =====================
 CLOSE MODAL
 ===================== */
 
 function closeModal(){
-
-
-if(currentVideoInterval){
-
-    clearInterval(
-    currentVideoInterval
-    );
-
-}
 
 document.getElementById(
 "destinationModal"
