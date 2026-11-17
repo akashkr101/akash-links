@@ -2,14 +2,44 @@ const profile = {
     name: "Akash Kumar",
     brand: "Accelerate Clicks",
     tagline: "Travel • Photography • Stories",
-    image: "profile/profile.jpg",
-
-    socials: {
-        instagram: "https://www.instagram.com/accelerate.clicks",
-        youtube: "https://www.youtube.com/@accelerate.clicks",
-        facebook: "https://www.facebook.com/accelerate.clicks",
-        snapchat: "https://snapchat.com/add/akashkr_xda"
-    }
+    image:"https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974705/profile_tcyegt.jpg",
+    socials: [
+        {
+            platform: "Facebook",
+            accounts: [
+                { label: "Personal", url: "https://www.facebook.com/akashkumar.xda" },
+                { label: "Public", url: "https://www.facebook.com/accelerate.clicks" }
+            ]
+        },
+        {
+            platform: "Instagram",
+            accounts: [
+                { label: "Personal", url: "https://www.instagram.com/akashkumar_xda" },
+                { label: "Accelerate Clicks", url: "https://www.instagram.com/accelerate.clicks/" },
+                { label: "Biharsharif Vlogs", url: "https://www.instagram.com/biharsharif.vlogs" }
+            ]
+        },
+        {
+            platform: "Snapchat",
+            accounts: [
+                { label: "Personal", url: "https://www.snapchat.com/@akashkr_xda" }
+            ]
+        },
+        {
+            platform: "YouTube · Email ID 1",
+            accounts: [
+                { label: "Accelerate Clicks", url: "https://www.youtube.com/@accelerate.clicks" },
+                { label: "Techinfo XDA", url: "https://www.youtube.com/@techinfo_xda" },
+                { label: "Gamezone XDA", url: "https://www.youtube.com/@Gamezone_xda" }
+            ]
+        },
+        {
+            platform: "YouTube · Email ID 2",
+            accounts: [
+                { label: "Akash Vlogs", url: "https://www.youtube.com/@akash-vlogs" }
+            ]
+        }
+    ]
 };
 
 const journeys = [
@@ -26,7 +56,7 @@ const journeys = [
             "Snowy mountains, winding roads and unforgettable adventures.",
 
             hero:
-            "images/2026-banaras/hero.jpg",
+            "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781976543/hero_a0jwfa.jpg",
 
             images: [
 
@@ -126,21 +156,21 @@ const journeys = [
 
             images: [
 
-                "images/2025-kashmir/gallery1.jpg",
-                "images/2025-kashmir/gallery2.jpg",
-                "images/2025-kashmir/gallery3.jpg",
-                "images/2025-kashmir/gallery4.jpg",
-                "images/2025-kashmir/gallery5.jpg",
-                "images/2025-kashmir/gallery6.jpg",
-                "images/2025-kashmir/gallery7.jpg"
+                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974704/gallery1_dhgspd.jpg",
+
+                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974713/gallery2_glaqj1.jpg",
+
+                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974708/gallery3_jisqor.jpg",
+
+                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974712/gallery4_bkeio8.jpg",
+
+                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974711/gallery5_op4vdi.jpg",
+
+                "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974709/gallery_hbbyb1.jpg"
 
             ],
 
-            videos: [
-
-                "videos/2025-kashmir/reel1.mp4"
-
-            ]
+            videos: [ ]
         },
 
         {
