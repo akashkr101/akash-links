@@ -56,10 +56,11 @@ const journeys = [
             "Snowy mountains, winding roads and unforgettable adventures.",
 
             hero:
-            "https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781976543/hero_a0jwfa.jpg",
+            "images/2026-banaras/hero.jpg",
 
             images: [
 
+                "images/2026-banaras/1.jpg",
                 "images/2026-banaras/gallery1.jpg",
                 "images/2026-banaras/gallery2.jpg",
                 "images/2026-banaras/gallery3.jpg",
@@ -93,6 +94,9 @@ const journeys = [
 
             images: [
 
+                "images/2026-lucknow/1.jpg",
+                "images/2026-lucknow/2.jpg",
+                "images/2026-lucknow/3.jpg",
                 "images/2026-lucknow/gallery1.jpg",
                 "images/2026-lucknow/gallery3.jpg",
                 "images/2026-lucknow/gallery6.jpg"
@@ -113,6 +117,9 @@ const journeys = [
 
             images: [
 
+                "images/2026-noida/1.jpg",
+                "images/2026-noida/2.jpg",
+                "images/2026-noida/3.jpg",
                 "images/2026-noida/gallery1.jpg",
                 "images/2026-noida/gallery3.jpg",
                 "images/2026-noida/gallery6.jpg"
@@ -133,6 +140,9 @@ const journeys = [
 
             images: [
 
+                "images/2026-delhi/1.jpg",
+                "images/2026-delhi/2.jpg",
+                "images/2026-delhi/3.jpg",
                 "images/2026-delhi/gallery1.jpg",
                 "images/2026-delhi/gallery3.jpg",
                 "images/2026-delhi/gallery6.jpg"
@@ -161,6 +171,8 @@ const journeys = [
 
             images: [
 
+                "images/2025-kashmir/1.jpg",
+                "images/2025-kashmir/2.jpg",
                 "images/2025-kashmir/gallery1.jpg",
                 "images/2025-kashmir/gallery2.jpg",
                 "images/2025-kashmir/gallery6.jpg",
@@ -182,6 +194,8 @@ const journeys = [
 
             images: [
 
+                "images/2025-nainital/1.jpg",
+                "images/2025-nainital/2.jpg",
                 "images/2025-nainital/gallery1.jpg",
                 "images/2025-nainital/gallery2.jpg",
                 "images/2025-nainital/gallery5.jpg",
@@ -203,6 +217,8 @@ const journeys = [
 
             images: [
 
+                "images/2025-noida/1.jpg",
+                "images/2025-noida/2.jpg",
                 "images/2025-noida/gallery1.jpg",
                 "images/2025-noida/gallery2.jpg",
                 "images/2025-noida/gallery6.jpg",
