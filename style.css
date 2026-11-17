@@ -188,7 +188,6 @@ body::after{
 
 .year-section{
     margin-bottom:80px;
-    animation:fadeUp .8s ease;
 }
 
 .year-title{
@@ -260,8 +259,6 @@ body::after{
     transition:
     transform .5s ease,
     box-shadow .5s ease;
-
-    animation:fadeUp .8s ease;
 }
 
 .destination-card:hover{
