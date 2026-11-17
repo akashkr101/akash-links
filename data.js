@@ -2,7 +2,7 @@ const profile = {
     name: "Akash Kumar",
     brand: "Accelerate Clicks",
     tagline: "Travel • Photography • Stories",
-    image:"https://res.cloudinary.com/dcs2uhjkh/image/upload/v1781974705/profile_tcyegt.jpg",
+    image: "profile/34.jpg",
     socials: [
         {
             platform: "Facebook",
