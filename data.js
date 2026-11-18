@@ -1,7 +1,11 @@
 const profile = {
     name: "Akash Kumar",
     tagline: "Travel • Photography • Stories",
-    image: "profile/profile.webp",
+    images: [
+        "profile/profile.webp",
+        "profile/gallery7.webp",
+        "profile/profile-2.webp"
+    ],
     socials: [
         {
             platform: "Facebook",

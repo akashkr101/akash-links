@@ -4,8 +4,27 @@ PROFILE
 
 document.getElementById("name").innerText = profile.name;
 document.getElementById("tagline").innerText = profile.tagline;
-document.getElementById("profileImage").src = profile.image;
-document.getElementById("profileImage").decoding = "async";
+
+function chooseProfileImage(images) {
+    if (images.length === 0) {
+        throw new Error("Add at least one photo to profile.images.");
+    }
+
+    const storageKey = "accelerate-clicks-profile-image";
+    const previousImage = localStorage.getItem(storageKey);
+    const availableImages = images.length > 1
+        ? images.filter(image => image !== previousImage)
+        : images;
+    const selectedImage =
+        availableImages[Math.floor(Math.random() * availableImages.length)];
+
+    localStorage.setItem(storageKey, selectedImage);
+    return selectedImage;
+}
+
+const profileImage = document.getElementById("profileImage");
+profileImage.src = chooseProfileImage(profile.images);
+profileImage.decoding = "async";
 
 /* =====================
 SOCIAL LINKS
