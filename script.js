@@ -68,8 +68,6 @@ STATS
 ===================== */
 
 let totalDestinations = 0;
-let totalPhotos = 0;
-let totalVideos = 0;
 let activeDestinationImages = [];
 let activeDestinationName = "";
 let currentLightboxIndex = 0;
@@ -139,8 +137,6 @@ document.getElementById(
 yearData.destinations.forEach(place => {
 
     totalDestinations++;
-    totalPhotos += place.images.length;
-    totalVideos += place.videos.length;
 
     const card = document.createElement("button");
     card.type = "button";
@@ -195,14 +191,6 @@ document.getElementById(
 document.getElementById(
 "destinationCount"
 ).innerText = totalDestinations;
-
-document.getElementById(
-"photoCount"
-).innerText = totalPhotos;
-
-document.getElementById(
-"videoCount"
-).innerText = totalVideos;
 
 document.getElementById("currentYear").textContent =
     new Date().getFullYear();
