@@ -23,7 +23,7 @@ const profile = {
         {
             platform: "Snapchat",
             accounts: [
-                { label: "Personal", url: "https://www.snapchat.com/@akashkr_xda" }
+                { label: "akashkr_xda", url: "https://www.snapchat.com/@akashkr_xda" }
             ]
         },
         {
