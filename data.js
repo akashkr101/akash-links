@@ -7,14 +7,12 @@ const profile = {
         {
             platform: "Facebook",
             accounts: [
-                { label: "Personal", url: "https://www.facebook.com/akashkumar.xda" },
-                { label: "Public", url: "https://www.facebook.com/accelerate.clicks" }
+                { label: "Accelerate Clicks", url: "https://www.facebook.com/accelerate.clicks" }
             ]
         },
         {
             platform: "Instagram",
             accounts: [
-                { label: "Personal", url: "https://www.instagram.com/akashkumar_xda" },
                 { label: "Accelerate Clicks", url: "https://www.instagram.com/accelerate.clicks/" },
                 { label: "Biharsharif Vlogs", url: "https://www.instagram.com/biharsharif.vlogs" }
             ]
@@ -26,16 +24,11 @@ const profile = {
             ]
         },
         {
-            platform: "YouTube · Email ID 1",
+            platform: "YouTube",
             accounts: [
                 { label: "Accelerate Clicks", url: "https://www.youtube.com/@accelerate.clicks" },
                 { label: "Techinfo XDA", url: "https://www.youtube.com/@techinfo_xda" },
-                { label: "Gamezone XDA", url: "https://www.youtube.com/@Gamezone_xda" }
-            ]
-        },
-        {
-            platform: "YouTube · Email ID 2",
-            accounts: [
+                { label: "Gamezone XDA", url: "https://www.youtube.com/@Gamezone_xda" },
                 { label: "Akash Vlogs", url: "https://www.youtube.com/@akash-vlogs" }
             ]
         }
