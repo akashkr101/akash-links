@@ -138,10 +138,39 @@ body::after{
     backdrop-filter:blur(10px);
 }
 
-.social-group h3{
+.social-group-heading{
+    display:flex;
+    align-items:center;
+    gap:10px;
     margin-bottom:12px;
     color:#00d4ff;
     font-size:1rem;
+}
+
+.social-platform-icon{
+    width:30px;
+    height:30px;
+    flex:none;
+}
+
+.social-platform-icon--facebook{
+    color:#1877f2;
+}
+
+.social-platform-icon--instagram{
+    color:#e4405f;
+}
+
+.social-platform-icon--snapchat{
+    box-sizing:content-box;
+    padding:4px;
+    border-radius:7px;
+    background:#fffc00;
+    color:#050505;
+}
+
+.social-platform-icon--youtube{
+    color:#ff0000;
 }
 
 .social-group-links{
