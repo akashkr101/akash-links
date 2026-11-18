@@ -2,9 +2,8 @@ const profile = {
     name: "Akash Kumar",
     tagline: "Travel • Photography • Stories",
     images: [
-        "profile/profile.webp",
-        "profile/gallery7.webp",
-        "profile/profile-2.webp"
+        "profile/profile 1.jpg",
+        "profile/profile 2.jpg"
     ],
     socials: [
         {
@@ -49,19 +48,17 @@ const journeys = [
             name: "Banaras",
 
             description:
-            "Snowy mountains, winding roads and unforgettable adventures.",
+            "Sacred ghats, evening aarti and vibrant streets along the Ganga.",
 
             hero:
-            "images/2026-banaras/hero.webp",
+            "images/2026-banaras/20251125_183647.jpg",
 
             images: [
 
-                "images/2026-banaras/1.webp",
-                "images/2026-banaras/gallery1.webp",
-                "images/2026-banaras/gallery2.webp",
-                "images/2026-banaras/gallery3.webp",
-                "images/2026-banaras/gallery6.webp",
-                "images/2026-banaras/gallery7.webp"
+                "images/2026-banaras/20251125_184922.jpg",
+                "images/2026-banaras/20251125_190552.jpg",
+                "images/2026-banaras/20251125_201023.jpg",
+                "images/2026-banaras/20251126_182231.jpg"
 
             ],
 
@@ -80,73 +77,26 @@ const journeys = [
         },
 
         {
-            name: "Spiti Valley",
+            name: "Lucknow",
 
             description:
-            "Cold desert mountains and breathtaking landscapes.",
+            "Heritage landmarks, lively evenings and memorable food with friends.",
 
             hero:
-            "images/2026-lucknow/hero.webp",
+            "images/2026-lucknow/20230416_195410.jpg",
 
             images: [
 
-                "images/2026-lucknow/1.webp",
-                "images/2026-lucknow/2.webp",
-                "images/2026-lucknow/3.webp",
-                "images/2026-lucknow/gallery1.webp",
-                "images/2026-lucknow/gallery3.webp",
-                "images/2026-lucknow/gallery6.webp"
+                "images/2026-lucknow/20230414_164137.jpg",
+                "images/2026-lucknow/20230414_165202.jpg",
+                "images/2026-lucknow/20230414_223919.jpg",
+                "images/2026-lucknow/20230414_235157.jpg",
+                "images/2026-lucknow/20230416_203557.jpg"
 
             ],
 
             videos: []
         },
-
-        {
-            name: "Ladakh",
-
-            description:
-            "The ultimate road trip destination.",
-
-            hero:
-            "images/2026-noida/hero.webp",
-
-            images: [
-
-                "images/2026-noida/1.webp",
-                "images/2026-noida/2.webp",
-                "images/2026-noida/3.webp",
-                "images/2026-noida/gallery1.webp",
-                "images/2026-noida/gallery3.webp",
-                "images/2026-noida/gallery6.webp"
-
-            ],
-
-            videos: []
-        },
-
-        {
-            name: "Delhi",
-
-            description:
-            "The ultimate road trip destination.",
-
-            hero:
-            "images/2026-delhi/hero.webp",
-
-            images: [
-
-                "images/2026-delhi/1.webp",
-                "images/2026-delhi/2.webp",
-                "images/2026-delhi/3.webp",
-                "images/2026-delhi/gallery1.webp",
-                "images/2026-delhi/gallery3.webp",
-                "images/2026-delhi/gallery6.webp"
-
-            ],
-
-            videos: []
-        }
 
     ]
 },
@@ -183,47 +133,24 @@ const journeys = [
             name: "Nainital",
 
             description:
-            "Beautiful lakes and peaceful mountain views.",
+            "Lake views, mountain trails and peaceful moments in the hills.",
 
             hero:
-            "images/2025-nainital/hero.webp",
+            "images/2025-nainital/20250502_173938.jpg",
 
             images: [
 
-                "images/2025-nainital/1.webp",
-                "images/2025-nainital/2.webp",
-                "images/2025-nainital/gallery1.webp",
-                "images/2025-nainital/gallery2.webp",
-                "images/2025-nainital/gallery5.webp",
-                "images/2025-nainital/gallery6.webp"
+                "images/2025-nainital/20250502_111636.jpg",
+                "images/2025-nainital/20250502_111906.jpg",
+                "images/2025-nainital/20250502_112042.jpg",
+                "images/2025-nainital/20250502_155638.jpg",
+                "images/2025-nainital/20250502_190701.jpg",
+                "images/2025-nainital/20250502_192516.jpg"
 
             ],
 
             videos: []
         },
-
-        {
-            name: "Noida",
-
-            description:
-            "Urban exploration and city life.",
-
-            hero:
-            "images/2025-noida/hero.webp",
-
-            images: [
-
-                "images/2025-noida/1.webp",
-                "images/2025-noida/2.webp",
-                "images/2025-noida/gallery1.webp",
-                "images/2025-noida/gallery2.webp",
-                "images/2025-noida/gallery6.webp",
-                "images/2025-noida/gallery7.webp"
-
-            ],
-
-            videos: []
-        }
 
     ]
 }
