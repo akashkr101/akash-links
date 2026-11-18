@@ -140,17 +140,20 @@ body::after{
 
 .social-group-heading{
     display:flex;
+    flex-direction:column;
     align-items:center;
-    gap:10px;
-    margin-bottom:12px;
+    gap:8px;
+    margin-bottom:16px;
     color:#00d4ff;
     font-size:1rem;
+    text-align:center;
 }
 
 .social-platform-icon{
-    width:30px;
-    height:30px;
+    width:48px;
+    height:48px;
     flex:none;
+    filter:drop-shadow(0 3px 8px rgba(0,0,0,.25));
 }
 
 .social-platform-icon--facebook{
@@ -158,13 +161,15 @@ body::after{
 }
 
 .social-platform-icon--instagram{
-    color:#e4405f;
+    padding:9px;
+    border-radius:14px;
+    background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);
+    color:white;
 }
 
 .social-platform-icon--snapchat{
-    box-sizing:content-box;
-    padding:4px;
-    border-radius:7px;
+    padding:6px;
+    border-radius:12px;
     background:#fffc00;
     color:#050505;
 }
