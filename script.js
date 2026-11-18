@@ -2,7 +2,6 @@
 PROFILE
 ===================== */
 
-document.getElementById("brand").innerText = profile.brand;
 document.getElementById("name").innerText = profile.name;
 document.getElementById("tagline").innerText = profile.tagline;
 document.getElementById("profileImage").src = profile.image;

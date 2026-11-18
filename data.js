@@ -1,6 +1,5 @@
 const profile = {
     name: "Akash Kumar",
-    brand: "Accelerate Clicks",
     tagline: "Travel • Photography • Stories",
     image: "profile/profile.webp",
     socials: [
